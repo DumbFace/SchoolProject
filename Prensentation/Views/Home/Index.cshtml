@@ -84,6 +84,7 @@
             var name = $("#NameUpdate").val();
             var student = new Object();
             student.Name = name;
+            student.Id = id;
             $.ajax({
                 type: "PUT",
                 url: `api/student/${id}`,

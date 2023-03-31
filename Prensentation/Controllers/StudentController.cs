@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using CMS.Data;
 using CMS.Data.EFCore;
 using CMS.Core.Domain;
+using Microsoft.Extensions.Configuration;
 
 namespace Prensentation.Controllers
 {
@@ -13,45 +14,44 @@ namespace Prensentation.Controllers
     [Route("api/student")]
     public class StudentController : ControllerBase
     {
+        private readonly IConfiguration config;
+        private readonly IRepository _repo;
+
 
         private SchoolContext context;
-        public StudentController()
+        public StudentController(IRepository repo)
         {
-            context = new SchoolContext();
+            _repo = repo;
         }
 
         [HttpGet]
         public IActionResult Get()
         {
-            var listStudent = context.Students.ToList();
-
-            return Ok(listStudent);
+            return Ok(_repo.GetAll());
         }
 
         [HttpGet]
         [Route("{id}")]
         public IActionResult GetStudent([FromRoute] int id)
         {
-            var student = context.Students.Where(x => x.Id == id).FirstOrDefault();
-            return Ok(new { result = "OK", data = student });
+            return Ok(new { result = "OK", data = _repo.GetById(id) });
         }
 
 
         [HttpPost]
         public IActionResult Create([FromBody] Student student)
         {
-            context.Add(student);
-            context.SaveChanges();
+            _repo.Insert(student);
+            _repo.Save();
             return Ok("Saved!");
         }
 
         [HttpPut]
         [Route("{id}")]
-        public IActionResult Put([FromBody] Student _student, [FromRoute] int id)
+        public IActionResult Put([FromBody] Student student, [FromRoute] int id)
         {
-            var student = context.Students.Where(x => x.Id == id).FirstOrDefault();
-            student.Name = _student.Name;
-            context.SaveChanges();
+            _repo.Update(student);
+            _repo.Save();
             return Ok("OK");
         }
 
@@ -60,9 +60,8 @@ namespace Prensentation.Controllers
         [Route("{id}")]
         public IActionResult Delete([FromRoute] int id)
         {
-            var student = context.Students.Where(x => x.Id == id).FirstOrDefault();
-            context.Students.Remove(student);
-            context.SaveChanges();
+            _repo.Delete(id);
+            _repo.Save();
             return Ok("OK");
         }
     }
