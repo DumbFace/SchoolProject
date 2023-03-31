@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using CMS.Data.EFCore;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using SchoolProject.Models;
 
@@ -13,16 +14,19 @@ namespace SchoolProject.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private readonly SchoolContext context;
-        public HomeController(ILogger<HomeController> logger)
+        private readonly IRepository _repo;
+
+        public HomeController(ILogger<HomeController> logger,
+        IRepository repo
+            )
         {
+            _repo = repo;
             _logger = logger;
-            context = new SchoolContext();
         }
 
         public IActionResult Index()
         {
-            var list = context.Students.ToList();
+            var list = _repo.GetAll();
             return View(list);
         }
 

@@ -28,6 +28,8 @@ namespace SchoolProject
             services.AddControllersWithViews();
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
             services.AddDbContext<SchoolContext>();
+            services.AddSingleton<IConfiguration>(Configuration);
+            services.AddTransient<IRepository,Repository>();
 
             Constrants.TrustedConnection = Configuration.GetConnectionString("TrustedConnection");
             Constrants.AuthenticationConnection = Configuration.GetConnectionString("AuthenticationConnection");
