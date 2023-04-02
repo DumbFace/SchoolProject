@@ -8,17 +8,18 @@ using Microsoft.Extensions.Configuration;
 
 namespace CMS.Data.EFCore
 {
-    public class SchoolContext : DbContext
+    public class KhangDB : DbContext
     {
-        public SchoolContext()
+        public KhangDB()
         {
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(Helper.Constrants.TrustedConnection);
+            optionsBuilder.UseSqlServer(@"Server=.\SQLEXPRESSKHANG;Database=KhangDB;Trusted_Connection=True;");
         }
 
-        public DbSet<Student> Students { get; set; }
+        public DbSet<Article> Articles { get; set; }
+        public DbSet<Category> Categories { get; set; }
     }
 }

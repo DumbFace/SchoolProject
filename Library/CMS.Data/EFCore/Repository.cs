@@ -2,55 +2,49 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using CMS.Core.Domain;
 using Microsoft.EntityFrameworkCore;
 
 namespace CMS.Data.EFCore
 {
-    public class Repository : IRepository
+    public class Repository<T> : IRepository<T> where T : class
     {
-        private readonly SchoolContext _context;
+        private KhangDB _context = null;
+        private DbSet<T> table = null;
         public Repository()
         {
-            _context = new SchoolContext();
+            this._context = new KhangDB();
+            table = _context.Set<T>();
         }
-
-        public Repository(SchoolContext context)
+        public Repository(KhangDB _context)
         {
-            _context = context;
+            this._context = _context;
+            table = _context.Set<T>();
         }
-
-        public void Delete(int idStudent)
+        public IEnumerable<T> GetAll()
         {
-            Student student = _context.Students.Find(idStudent);
-            _context.Students.Remove(student);
+            return table.ToList();
         }
-
-        public IEnumerable<Student> GetAll()
+        public T GetById(object id)
         {
-            return _context.Students.ToList();
+            return table.Find(id);
         }
-
-        public Student GetById(int idStudent)
+        public void Insert(T obj)
         {
-            return _context.Students.Find(idStudent);
+            table.Add(obj);
         }
-
-        public void Insert(Student student)
+        public void Update(T obj)
         {
-            _context.Students.Add(student);
+            table.Attach(obj);
+            _context.Entry(obj).State = EntityState.Modified;
         }
-
+        public void Delete(object id)
+        {
+            T existing = table.Find(id);
+            table.Remove(existing);
+        }
         public void Save()
         {
             _context.SaveChanges();
-        }
-
-        public void Update(Student student)
-        {
-            // var _student = _context.Students.Find(student.Id);
-            // _student = student;
-            _context.Entry(student).State = EntityState.Modified;
         }
     }
 }

@@ -10,6 +10,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using CMS.Data.EFCore;
 using CMS.Data.Helper;
+using CMS.Data.Service.CategoryService;
 
 namespace SchoolProject
 {
@@ -27,9 +28,8 @@ namespace SchoolProject
         {
             services.AddControllersWithViews();
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
-            services.AddDbContext<SchoolContext>();
             services.AddSingleton<IConfiguration>(Configuration);
-            services.AddTransient<IRepository,Repository>();
+            services.AddTransient<ICategoryService, CategoryService>();
 
             Constrants.TrustedConnection = Configuration.GetConnectionString("TrustedConnection");
             Constrants.AuthenticationConnection = Configuration.GetConnectionString("AuthenticationConnection");
@@ -58,6 +58,12 @@ namespace SchoolProject
 
             app.UseEndpoints(endpoints =>
             {
+
+                endpoints.MapAreaControllerRoute(
+                    name: "cp",
+                    areaName: "cp",
+                    pattern: "cp/{controller=Home}/{action=Index}/{id?}");
+
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");

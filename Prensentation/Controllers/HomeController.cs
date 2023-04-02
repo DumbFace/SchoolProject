@@ -14,20 +14,19 @@ namespace SchoolProject.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private readonly IRepository _repo;
+        // private readonly IRepository<Art _repo;
 
-        public HomeController(ILogger<HomeController> logger,
-        IRepository repo
-            )
-        {
-            _repo = repo;
-            _logger = logger;
-        }
+        // public HomeController(ILogger<HomeController> logger,
+        // IRepository repo
+        //     )
+        // {
+        //     _repo = repo;
+        //     _logger = logger;
+        // }
 
         public IActionResult Index()
         {
-            var list = _repo.GetAll();
-            return View(list);
+            return View();
         }
 
         public IActionResult Privacy()

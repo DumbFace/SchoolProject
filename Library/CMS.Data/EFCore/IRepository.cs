@@ -6,14 +6,13 @@ using CMS.Core.Domain;
 
 namespace CMS.Data.EFCore
 {
-    public interface IRepository
+    public interface IRepository<T> where T : class
     {
-        IEnumerable<Student> GetAll();
-        Student GetById(int idStudent);
-        void Insert(Student student);
-        void Update(Student student);
-        void Delete(int idStudent);
+        IEnumerable<T> GetAll();
+        T GetById(object id);
+        void Insert(T obj);
+        void Update(T obj);
+        void Delete(object id);
         void Save();
-
     }
 }

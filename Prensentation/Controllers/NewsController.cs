@@ -23,7 +23,6 @@ namespace Prensentation.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            // var listStudent = context.Students.ToList();
             var articles = new List<ArticleModel>(){
                     new ArticleModel(){ Title = "China battery giant CATL’s $5 billion Swiss listing delayed amid Beijing regulatory concerns",UrlToImage="https://d.ibtimes.com/en/full/4432407/worker-stands-outside-factory-contemporary-amperex-technology-ltd-catl-ningde.jpg", Description = "By Scott Murdoch, Julie Zhu and Kane Wu HONG KONG (Reuters) -   Chinese battery giant CATL&#039;s plan to raise at least $5 billion in Swiss global depository receipts (GDR) has been delayed as Beijing regulators raise concerns over the large scale of the off…", Content = "The worlds largest battery maker, formally known as Contemporary Amperex Technology Co (CATL), had expected to receive a green light for the listing in Zurich from the Chinese securities regulator by… [+4000 chars]" },
                     new ArticleModel(){ Title = "Tesla's Arrival Accelerates Mexico 'Nearshoring' Boom", UrlToImage="https://d.ibtimes.com/en/full/4432395/welcome-tesla-reads-billboard-mexicos-northern-city-monterrey-where-us-electric-car-maker.jpg", Description = "Tesla's arrival accelerates Mexico 'nearshoring' boom", Content = "Welcome Tesla' reads a billboard in Mexico's northern city of Monterrey, where US electric car maker plans to open a giant factoryAFP\r\nGovernor Samuel Garcia is a man in a hurry, juggling his daught… [+4707 chars]" },
