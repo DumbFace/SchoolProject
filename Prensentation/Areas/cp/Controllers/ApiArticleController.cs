@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using CMS.Core.Domain;
 using CMS.Data.EFCore;
+using CMS.Data.Service.ArticleService;
 using CMS.Data.Service.CategoryService;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
@@ -11,13 +12,13 @@ using Microsoft.Extensions.Configuration;
 namespace Prensentation.Areas.cp.Controllers
 {
     [ApiController]
-    [Route("api/category")]
-    public class CategoryController : ControllerBase
+    [Route("api/article")]
+    public class ApiArticleController : ControllerBase
     {
         private readonly IConfiguration config;
-        private readonly ICategoryService _service;
+        private readonly IArticleService _service;
         private KhangDB context;
-        public CategoryController(ICategoryService service)
+        public ApiArticleController(IArticleService service)
         {
             _service = service;
         }
@@ -37,7 +38,7 @@ namespace Prensentation.Areas.cp.Controllers
 
 
         [HttpPost]
-        public IActionResult Create([FromBody] Category obj)
+        public IActionResult Create([FromBody] Article obj)
         {
             _service.Insert(obj);
             _service.Save();
@@ -46,7 +47,7 @@ namespace Prensentation.Areas.cp.Controllers
 
         [HttpPut]
         [Route("{id}")]
-        public IActionResult Put([FromBody] Category obj, [FromRoute] int id)
+        public IActionResult Put([FromBody] Article obj, [FromRoute] int id)
         {
             _service.Update(obj);
             _service.Save();

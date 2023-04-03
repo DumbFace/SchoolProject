@@ -11,6 +11,7 @@ using Microsoft.Extensions.Hosting;
 using CMS.Data.EFCore;
 using CMS.Data.Helper;
 using CMS.Data.Service.CategoryService;
+using CMS.Data.Service.ArticleService;
 
 namespace SchoolProject
 {
@@ -30,6 +31,7 @@ namespace SchoolProject
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
             services.AddSingleton<IConfiguration>(Configuration);
             services.AddTransient<ICategoryService, CategoryService>();
+            services.AddTransient<IArticleService, ArticleSerivce>();
 
             Constrants.TrustedConnection = Configuration.GetConnectionString("TrustedConnection");
             Constrants.AuthenticationConnection = Configuration.GetConnectionString("AuthenticationConnection");

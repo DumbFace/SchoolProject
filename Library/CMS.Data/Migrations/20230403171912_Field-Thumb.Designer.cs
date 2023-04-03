@@ -4,14 +4,16 @@ using CMS.Data.EFCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace CMS.Data.Migrations
 {
     [DbContext(typeof(KhangDB))]
-    partial class KhangDBModelSnapshot : ModelSnapshot
+    [Migration("20230403171912_Field-Thumb")]
+    partial class FieldThumb
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

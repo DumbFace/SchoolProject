@@ -10932,3 +10932,11 @@ a[data-toggle=collapse] {
 }
 
 
+div#editor {
+    border: 1px solid var(--ck-color-toolbar-border);
+    height: 50vh;
+}
+
+input#btnCheckImage {
+    display: block;
+}

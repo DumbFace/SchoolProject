@@ -13,6 +13,7 @@ namespace CMS.Core.Domain
         public string Title { get; set; }
         public string Description { get; set; }
         public string Content { get; set; }
+        public string Thumb { get; set; }
         public CategoryEnum Category { get; set; }
         public DateTime DatePublish { get; set; }
         public DateTime DateModified { get; set; }
