@@ -47,6 +47,9 @@ namespace CMS.Data.Migrations
                     b.Property<bool>("IsDelete")
                         .HasColumnType("bit");
 
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
                     b.Property<string>("Thumb")
                         .HasColumnType("nvarchar(max)");
 

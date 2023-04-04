@@ -1,0 +1,17 @@
+E:\Workspace\Repo\Github\SchoolProject\Prensentation\Web.Factory\obj\Debug\net5.0\Web.Factory.csproj.AssemblyReference.cache
+E:\Workspace\Repo\Github\SchoolProject\Prensentation\Web.Factory\obj\Debug\net5.0\Web.Factory.GeneratedMSBuildEditorConfig.editorconfig
+E:\Workspace\Repo\Github\SchoolProject\Prensentation\Web.Factory\obj\Debug\net5.0\Web.Factory.AssemblyInfoInputs.cache
+E:\Workspace\Repo\Github\SchoolProject\Prensentation\Web.Factory\obj\Debug\net5.0\Web.Factory.AssemblyInfo.cs
+E:\Workspace\Repo\Github\SchoolProject\Prensentation\Web.Factory\obj\Debug\net5.0\Web.Factory.csproj.CoreCompileInputs.cache
+E:\Workspace\Repo\Github\SchoolProject\Prensentation\Web.Factory\bin\Debug\net5.0\Web.Factory.deps.json
+E:\Workspace\Repo\Github\SchoolProject\Prensentation\Web.Factory\bin\Debug\net5.0\Web.Factory.dll
+E:\Workspace\Repo\Github\SchoolProject\Prensentation\Web.Factory\bin\Debug\net5.0\Web.Factory.pdb
+E:\Workspace\Repo\Github\SchoolProject\Prensentation\Web.Factory\bin\Debug\net5.0\CMS.Core.dll
+E:\Workspace\Repo\Github\SchoolProject\Prensentation\Web.Factory\bin\Debug\net5.0\CMS.Data.dll
+E:\Workspace\Repo\Github\SchoolProject\Prensentation\Web.Factory\bin\Debug\net5.0\CMS.Core.pdb
+E:\Workspace\Repo\Github\SchoolProject\Prensentation\Web.Factory\bin\Debug\net5.0\CMS.Data.pdb
+E:\Workspace\Repo\Github\SchoolProject\Prensentation\Web.Factory\obj\Debug\net5.0\Web.Factory.csproj.CopyComplete
+E:\Workspace\Repo\Github\SchoolProject\Prensentation\Web.Factory\obj\Debug\net5.0\Web.Factory.dll
+E:\Workspace\Repo\Github\SchoolProject\Prensentation\Web.Factory\obj\Debug\net5.0\refint\Web.Factory.dll
+E:\Workspace\Repo\Github\SchoolProject\Prensentation\Web.Factory\obj\Debug\net5.0\Web.Factory.pdb
+E:\Workspace\Repo\Github\SchoolProject\Prensentation\Web.Factory\obj\Debug\net5.0\ref\Web.Factory.dll

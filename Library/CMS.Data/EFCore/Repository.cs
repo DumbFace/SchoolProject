@@ -21,7 +21,7 @@ namespace CMS.Data.EFCore
             table = _context.Set<T>();
         }
         public IEnumerable<T> GetAll()
-        {
+        { 
             return table.ToList();
         }
         public T GetById(object id)

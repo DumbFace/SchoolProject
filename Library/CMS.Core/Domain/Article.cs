@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
@@ -20,13 +21,23 @@ namespace CMS.Core.Domain
         public DateTime DateCreate { get; set; }
         public bool IsDelete { get; set; }
         public string Url { get; set; }
+        public StatusCode Status { get; set; }
 
     }
 
     public enum CategoryEnum
     {
-        News,
-        Music,
+        [Display(Name = "Thủ Thuật")]
+        Trick,
+        [Display(Name = "Design Pattern")]
         LifeStyle,
+    }
+
+    public enum StatusCode
+    {
+        [Display(Name = "Chỉ tôi xem")]
+        Pending,
+        [Display(Name = "Xuất bản")]
+        Public,
     }
 }
