@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CMS.Data.Migrations
 {
     [DbContext(typeof(KhangDB))]
-    [Migration("20230402164611_khangdb")]
-    partial class khangdb
+    [Migration("20230404041743_init")]
+    partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -48,6 +48,9 @@ namespace CMS.Data.Migrations
 
                     b.Property<bool>("IsDelete")
                         .HasColumnType("bit");
+
+                    b.Property<string>("Thumb")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Title")
                         .HasColumnType("nvarchar(max)");

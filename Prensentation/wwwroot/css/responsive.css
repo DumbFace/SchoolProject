@@ -153,10 +153,11 @@
         padding-top: 14px;
         padding-bottom: 14px; }
     #header .stick-holder {
-      background: #fff; }
-    #header .holder {
-      padding-top: 39px;
-      padding-bottom: 32px; }
+      background: #2a2d34; }
+      #header .holder {
+        padding-top: 16px;
+        padding-bottom: 26px;
+    }
     #header form {
       width: 102px; }
   .page-error .heading-holder {
@@ -308,7 +309,7 @@
       text-align: left; }
       .version-ii #nav a,
       .version-iii #nav a {
-        color: #2a2d34; }
+        color: #fff; }
       .version-ii #nav .drop a,
       .version-iii #nav .drop a {
         color: #fff; }

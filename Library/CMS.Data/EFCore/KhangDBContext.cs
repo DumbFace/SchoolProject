@@ -16,7 +16,7 @@ namespace CMS.Data.EFCore
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=.\SQLEXPRESSKHANG;Database=KhangDB;Trusted_Connection=True;");
+            optionsBuilder.UseSqlServer(Helper.Constrants.AuthenticationConnection);
         }
 
         public DbSet<Article> Articles { get; set; }

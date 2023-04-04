@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CMS.Data.Migrations
 {
     [DbContext(typeof(KhangDB))]
-    [Migration("20230403171912_Field-Thumb")]
-    partial class FieldThumb
+    [Migration("20230404063422_field-link")]
+    partial class fieldlink
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -53,6 +53,9 @@ namespace CMS.Data.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Title")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Url")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");

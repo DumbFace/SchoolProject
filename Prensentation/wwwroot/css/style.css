@@ -2005,7 +2005,7 @@ h1 {
 
 .cols-holder time {
 	display: block;
-	font: 700 12px/1.1 "biko", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font: 700 12px/1.1 "Helvetica Neue", Helvetica, Arial, sans-serif;
 	margin: 0 0 22px;
 	color: #2a2d34;
 	text-transform: uppercase;
@@ -3754,7 +3754,7 @@ aside.version-ii .subscribe-form .form-control:focus {
 }
 
 .post-block time {
-	font: 700 12px/1.1 "biko", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font: 700 12px/1.1  "Helvetica Neue", Helvetica, Arial, sans-serif;
 	display: inline-block;
 	vertical-align: top;
 	text-transform: uppercase;
@@ -6270,4 +6270,9 @@ aside.version-ii .subscribe-form .form-control:focus {
 		transform: rotate(360deg);
 	}
 }
-
+
+
+
+.text-wrap time a {
+    text-transform: none;
+}

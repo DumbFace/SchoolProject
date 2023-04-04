@@ -32,8 +32,9 @@
             "args": [
                 "watch",
                 "run",
-                "--project",
-                "${workspaceFolder}/Prensentation/SchoolProject.csproj"
+                "${workspaceFolder}/Prensentation/SchoolProject.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
             ],
             "problemMatcher": "$msCompile"
         }

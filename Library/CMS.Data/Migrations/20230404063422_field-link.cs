@@ -2,12 +2,12 @@
 
 namespace CMS.Data.Migrations
 {
-    public partial class FieldThumb : Migration
+    public partial class fieldlink : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.AddColumn<string>(
-                name: "Thumb",
+                name: "Url",
                 table: "tblArticle",
                 type: "nvarchar(max)",
                 nullable: true);
@@ -16,7 +16,7 @@ namespace CMS.Data.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropColumn(
-                name: "Thumb",
+                name: "Url",
                 table: "tblArticle");
         }
     }

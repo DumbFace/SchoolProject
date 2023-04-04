@@ -19,6 +19,8 @@ namespace CMS.Core.Domain
         public DateTime DateModified { get; set; }
         public DateTime DateCreate { get; set; }
         public bool IsDelete { get; set; }
+        public string Url { get; set; }
+
     }
 
     public enum CategoryEnum

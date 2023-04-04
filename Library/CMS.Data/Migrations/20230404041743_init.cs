@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace CMS.Data.Migrations
 {
-    public partial class khangdb : Migration
+    public partial class init : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -16,6 +16,7 @@ namespace CMS.Data.Migrations
                     Title = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Content = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Thumb = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Category = table.Column<int>(type: "int", nullable: false),
                     DatePublish = table.Column<DateTime>(type: "datetime2", nullable: false),
                     DateModified = table.Column<DateTime>(type: "datetime2", nullable: false),

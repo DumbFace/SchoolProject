@@ -1,32 +1,31 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
-using CMS.Data.EFCore;
 using CMS.Data.Service.ArticleService;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using SchoolProject.Models;
 
-namespace SchoolProject.Controllers
+namespace Prensentation.Controllers
 {
-    public class HomeController : Controller
+    public class ReadController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly ILogger<ReadController> _logger;
 
         private readonly IArticleService _service;
 
-        public HomeController(IArticleService service)
+        public ReadController(IArticleService service)
         {
             _service = service;
         }
 
-        public IActionResult Index()
+        [Route("{url}-{id}.html")]
+        public IActionResult Index(string url,int id)
         {
-            var lst = _service.GetAll();
-            return View(lst);
+            var article = _service.GetById(id);
+            return View(article);
         }
 
         public IActionResult Privacy()

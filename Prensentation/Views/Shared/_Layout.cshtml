@@ -4,36 +4,35 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>phamphuongkhang - Trang web thực hành</title>
+    <title>Blog Thủ Thuật | Chia sẽ các thủ thuật về công nghệ</title>
     <meta name="google-site-verification" content="n7-Sc3A7Znnok_1AAeUhdBhjcStPTVQ07kGtv9v-mvE" />
     <meta name="google-site-verification" content="2yLc0cvYrHTy2eHVWlNzLQew7Bcg5TfZ8gkMReAH-4A" />
     <meta content="index,follow" name="robots" />
-    <meta name="description" content="WebSite của Phạm Phương Khang">
-    <meta property="og:title" content="WebSite của Phạm Phương Khang" />
-    <meta property="og:description" content="WebSite để thực hành của Phạm Phương Khang" />
-    <meta property="og:url" content="https://tinsaohan.com/" />
+    <meta name="description" content="Blog chia sẽ kiến thức & mẹo vặt trong quá trình phát triển ứng dụng">
+    <meta property="og:title" content="Blog Thủ Thuật | Chia sẽ các thủ thuật về công nghệ" />
+    <meta property="og:description" content="Blog chia sẽ kiến thức & mẹo vặt trong quá trình phát triển ứng dụng" />
+    <meta property="og:url" content="https://phamphuongkhang.xyz" />
     <meta property="og:type" content="article" />
-    <meta property="og:image" content="https://tinsaohan.com/Content/Images/logohome.png" />
+    <meta property="og:image" content="https://phamphuongkhang.xyz/images/logo.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="628" />
 
     <link href='https://fonts.googleapis.com/css?family=Merriweather:300,400,700%7CPoppins:400,300,500,600,700'
         rel='stylesheet' type='text/css'>
 
-
-    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
     <!-- include the site stylesheet -->
-    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="/css/bootstrap.css">
     <!-- include the site stylesheet -->
-    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="/css/slick.css">
     <!-- include the site stylesheet -->
-    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="/css/animate.css">
     <!-- include the site stylesheet -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <!-- include the site stylesheet -->
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="/css/responsive.css">
     <!-- include the site stylesheet -->
-    <link rel="stylesheet" href="css/colors.css">
+    <link rel="stylesheet" href="/css/colors.css">
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-R51RZ8YNQH"></script>
@@ -47,20 +46,18 @@
 </head>
 
 <body>
-
     <div id="wrapper">
         <partial name="_header" />
         @RenderBody()
+        <partial name="_footer" />
     </div>
 
-
     <!-- include jQuery -->
-    <script src="js/jquery.js"></script>
-
+    <script src="/js/jquery.js"></script>
     <!-- include jQuery -->
-    <script src="js/plugins.js"></script>
+    <script src="/js/plugins.js"></script>
     <!-- include jQuery -->
-    <script src="js/jquery.main.js"></script>
+    <script src="/js/jquery.main.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 

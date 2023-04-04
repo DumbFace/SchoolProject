@@ -22,8 +22,7 @@
                 items: [
                     'heading', '|', 'fontSize', 'fontFamily', '|', 'bold', 'italic', 'underline', 'strikethrough', 'highlight', '|', 'alignment',
                     '|', 'numberedList', 'bulletedList', '|', 'indent', 'outdent',
-                    '|', 'todoList', 'link', 'blockQuote', 'imageUpload', 'insertTable', 'mediaEmbed', '|', 'undo', 'redo'
-                ]
+                    '|', 'todoList', 'link', 'blockQuote', 'imageUpload', 'insertTable', 'mediaEmbed', '|', 'undo', 'redo', '|', 'codeBlock']
             },
             image: {
                 toolbar: [
@@ -96,9 +95,16 @@ function Update() {
 
 function CheckImage() {
     var urlImage = $("#Thumb").val();
-    $("#previewImageThumb").prop("src", urlImage);
+    $("#previewImageThumb").html(`<img src="${urlImage}" />`);
 }
 
-function Edit(id){
+function Edit(id) {
     document.location = `/cp/article/edit?id=${id}`;
+}
+
+function SaveImageCkEditor(e) {
+    var urlAvatar = $("#AvatarCkeditor").val();
+    var img = '<img src="' + urlAvatar + '" />&nbsp;';
+    InsertHTML(img);
+    $('modal').show('hide');
 }

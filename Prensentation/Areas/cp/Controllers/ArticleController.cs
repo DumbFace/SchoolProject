@@ -53,6 +53,7 @@ namespace Prensentation.Areas.cp.Controllers
         [HttpPost]
         public IActionResult Create([FromBody] Article obj)
         {
+            obj.Url = myCommon.FriendlyUrl(obj.Title);
             obj.DateCreate = DateTime.Now;
             obj.DateModified = DateTime.Now;
             obj.DatePublish = DateTime.Now;

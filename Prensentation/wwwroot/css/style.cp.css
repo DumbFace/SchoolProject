@@ -10940,3 +10940,7 @@ div#editor {
 input#btnCheckImage {
     display: block;
 }
+
+span#back-top {
+    top: 860px !important;
+}
