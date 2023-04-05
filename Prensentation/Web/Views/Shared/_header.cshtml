@@ -92,50 +92,10 @@
 									</div> *@
 									<!-- drop of the page end -->
 								</li>
-								@* <li data-drop="drop-right">
-									<a href="single-post.html">blog</a>
-									<!-- drop of the page -->
-									<div class="drop">
-										<ul>
-											<li>
-												<a href="single-post.html">detail-v1</a>
-												<!-- drop of the page -->
-												<div class="drop">
-													<ul>
-														<li><a href="post-left-sidebar-v1.html">left sidebar</a></li>
-														<li><a href="post-detail-nosidebar.html">nosidebar</a></li>
-														<li><a href="post-detail-audio-v1.html">post detail audio</a>
-														</li>
-														<li><a href="post-detail-slider-v1.html">post detail slider</a>
-														</li>
-														<li><a href="post-detail-video-v1.html">post detail video</a>
-														</li>
-													</ul>
-												</div>
-												<!-- drop of the page end -->
-											</li>
-											<li>
-												<a href="single-postv2.html">detail-v2</a>
-												<!-- drop of the page -->
-												<div class="drop">
-													<ul>
-														<li><a href="post-left-sidebar-v2.html">left sidebar</a></li>
-														<li><a href="right-sidebar-v2.html">right sidebar</a></li>
-														<li><a href="post-detail-audio-v2.html">post detail audio</a>
-														</li>
-														<li><a href="post-detail-slider-v2.html">post detail slider</a>
-														</li>
-														<li><a href="post-detail-video-v2.html">post detail video</a>
-														</li>
-													</ul>
-												</div>
-												<!-- drop of the page end -->
-											</li>
-										</ul>
-									</div>
-									<!-- drop of the page end -->
+								<li data-drop="drop-right">
+									<a  asp-controller="Category" asp-action="Index" asp-route-type="@ListView.Trick">Thủ Thuật</a>
 								</li>
-								<li data-drop="drop-right"><a href="archive.html">archive</a></li>
+								@* <li data-drop="drop-right"><a href="archive.html">archive</a></li>
 								<li>
 									<a href="#">Pages</a>
 									<!-- drop of the page -->

@@ -200,32 +200,11 @@
 					<!-- widget of the page end -->
 					<!-- cols holder of the page -->
 					<div class="cols-holder">
-						<!-- post of the page -->
-						@if (Model.Count() > 0)
-						{
-							@foreach (var item in Model)
-							{
-								string urlLink = item.Url + "-" + item.Id + ".html";
-								<article class="post wow fadeInLeft" data-wow-delay="0.6s">
-									<div class="img-holder">
-										<a href="@urlLink">
-											<img src="@item.Thumb" alt="@item.Title">
-										</a>
-									</div>
-									<div class="text-wrap">
-										<time>@item.DateCreate.ToString("dd/MM/yyyy HH:mm") - <a href="#">Thủ Thuật</a></time>
-										<h2>
-											<a href="/@urlLink">@item.Title</a>
-										</h2>
-										<p>
-											@item.Description
-										</p>
-										<a href="single-post.html" class="link-more">Đọc thêm</a>
-									</div>
-								</article>
-							}
-						}
-						<!-- post of the page end -->
+
+						@await Component.InvokeAsync("List", new ListViewModel(){
+							Type = ViewBag.category
+						 })
+						
 					</div>
 					<!-- cols holder of the page end -->
 					<!-- Navigation of the page -->

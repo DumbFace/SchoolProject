@@ -1,4 +1,4 @@
-@model Article    
+@model ArticleViewModel    
 
     <div id="wrapper">
 		<!-- w1 of the page -->
@@ -19,7 +19,7 @@
 									<div class="img-holder">
 										<img src="@Model.Thumb" alt="image description">
 									</div>
-									<time datetime='@Model.DateCreate.ToString("dd/MM/yyyy")'><a href="#">@Model.DateCreate.ToString("dd/MM/yyyy HH:mm")</a></time>
+									<time datetime='@Model.DatePublishConvert'><a href="#">@Model.DatePublishConvert</a></time>
 									<h1>@Model.Title</h1>
                                     @Html.Raw(Model.Content)
 									<footer>

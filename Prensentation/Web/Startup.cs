@@ -9,7 +9,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using CMS.Data.EFCore;
-using CMS.Data.Helper;
+using CMS.Core.Helper;
 using CMS.Data.Service.CategoryService;
 using CMS.Data.Service.ArticleService;
 using Web.Factory;
@@ -21,7 +21,7 @@ namespace Web
         public Startup(IConfiguration configuration, IWebHostEnvironment env)
         {
             Configuration = configuration;
-            CMS.Data.Helper.Constrants.RootPath =  env.ContentRootPath;
+            Constrants.RootPath = env.ContentRootPath;
         }
 
         public IConfiguration Configuration { get; }
@@ -36,8 +36,9 @@ namespace Web
             services.AddScoped<IArticleService, ArticleSerivce>();
             services.AddScoped<IContentFactory, ContentFactory>();
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
-            
-            Constrants.TrustedConnection = Configuration.GetConnectionString("TrustedConnection");
+
+            Constrants.TrustedConnectionLaptop = Configuration.GetConnectionString("TrustedConnectionLaptop");
+            Constrants.TrustedConnectionDesktop = Configuration.GetConnectionString("TrustedConnectionDesktop");
             Constrants.AuthenticationConnection = Configuration.GetConnectionString("AuthenticationConnection");
             Constrants.UrlHost = Configuration.GetValue<string>("Url:UrlHost");
         }

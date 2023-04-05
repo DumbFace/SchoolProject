@@ -7,16 +7,18 @@ using CMS.Data.Service.ArticleService;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Web.Models;
-using CMS.Data.Helper;
+using CMS.Core.Helper;
+using Web.Factory;
+
 namespace Web.Controllers
 {
     public class ReadController : Controller
     {
         private readonly ILogger<ReadController> _logger;
 
-        private readonly IArticleService _service;
+        private readonly IContentFactory _service;
 
-        public ReadController(IArticleService service)
+        public ReadController(IContentFactory service)
         {
             _service = service;
         }
@@ -24,7 +26,7 @@ namespace Web.Controllers
         [Route("{url}-{id}.html")]
         public IActionResult Index(string url, int id)
         {
-            var article = _service.GetById(id);
+            var article = _service.GetArticleById(id);
 
             ViewBag.Title = article.Title;
             ViewBag.Description = article.Description;

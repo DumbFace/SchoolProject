@@ -11,7 +11,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Web.Factory;
-
+using CMS.Core.Helper;
 namespace Web.Areas.cp.Controllers
 {
     [Area("cp")]
@@ -30,7 +30,7 @@ namespace Web.Areas.cp.Controllers
 
         public IActionResult Index()
         {
-            GenerateSitemap(_content.GetArticles());
+            GenerateSitemap(_content.GetSiteMap());
             return View();
         }
 
@@ -41,9 +41,9 @@ namespace Web.Areas.cp.Controllers
         }
 
 
-        public void GenerateSitemap(IEnumerable<Article> articles)
+        public void GenerateSitemap(IEnumerable<ArticleViewModel> articles)
         {
-            string strPhysical = CMS.Data.Helper.Constrants.RootPath+ "\\wwwroot" + "\\sitemap.xml";
+            string strPhysical = Constrants.RootPath + "\\wwwroot" + "\\sitemap.xml";
 
             using (XmlTextWriter writer = new XmlTextWriter(strPhysical, Encoding.UTF8))
             {
@@ -60,13 +60,11 @@ namespace Web.Areas.cp.Controllers
                 writer.WriteElementString("priority", "1.0");
                 writer.WriteEndElement(); // end of url
 
-                foreach (Article item in articles)
+                foreach (ArticleViewModel item in articles)
                 {
-                    string DistributionDate = item.DatePublish.ToString("yyyy-MM-ddTHH:mm:00+07:00");
-                    string strLink = "http://phamphuongkhang.xyz/" + item.Url + "-" + item.Id + ".html";
                     writer.WriteStartElement("url");
-                    writer.WriteElementString("loc", strLink);
-                    writer.WriteElementString("lastmod", DistributionDate);
+                    writer.WriteElementString("loc", item.FriendLyUrl);
+                    writer.WriteElementString("lastmod", item.DateSiteMap);
                     writer.WriteElementString("changefreq", "hourly");
                     writer.WriteElementString("priority", "0.80");
                     writer.WriteEndElement();  //end url

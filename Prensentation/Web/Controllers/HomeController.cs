@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using CMS.Core.Domain;
 using CMS.Data.EFCore;
 using CMS.Data.Service.ArticleService;
 using Microsoft.AspNetCore.Mvc;
@@ -28,8 +29,8 @@ namespace Web.Controllers
 
         public IActionResult Index()
         {
-            var lst = _content.GetArticles();
-            return View(lst);
+            ViewBag.category = ListView.Home;
+            return View();
         }
 
         public IActionResult Privacy()

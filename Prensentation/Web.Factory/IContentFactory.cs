@@ -8,7 +8,8 @@ namespace Web.Factory
 {
     public interface IContentFactory
     {
-        IEnumerable<Article> GetArticles(int page = 10,int pageSize = 10);
-        Article GetArticleById(int id);
+        IEnumerable<ArticleViewModel> GetSiteMap();
+        IEnumerable<ArticleViewModel> GetArticles(CategoryEnum? type = null, int page = 10, int pageSize = 10);
+        ArticleViewModel GetArticleById(int id);
     }
 }

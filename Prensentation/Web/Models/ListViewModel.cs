@@ -12,7 +12,7 @@ namespace Web.Models
 
         public string Url { get; set; }
         public IEnumerable<Article> articles { get; set; }
-        public CategoryEnum Type { get; set; }
+        public ListView Type { get; set; }
     }
 
 }

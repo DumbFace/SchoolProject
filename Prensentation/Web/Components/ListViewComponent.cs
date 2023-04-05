@@ -19,13 +19,17 @@ namespace Web.ViewComponents
 
         public async Task<IViewComponentResult> InvokeAsync(ListViewModel model)
         {
-            List<Article> data = null;
+            IEnumerable<ArticleViewModel> data = null;
             switch (model.Type)
             {
-                case CategoryEnum.Trick:
+                case ListView.Home:
+                    data = _content.GetArticles();
+                    break;
+                case ListView.Trick:
+                    data = _content.GetArticles(CategoryEnum.Trick);
                     break;
             }
-            return View();
+            return View(data);
         }
     }
 }
