@@ -28,7 +28,7 @@ namespace Web.Factory
 
         public IEnumerable<Article> GetArticles(int page = 1, int pageSize = 10)
         {
-            return _repoArticle.GetAll().Where(x => x.Status == StatusCode.Public);
+            return _repoArticle.GetAll().Where(x => x.Status == StatusCode.Public && x.IsDelete == false).OrderByDescending(x => x.DatePublish);
         }
 
     }

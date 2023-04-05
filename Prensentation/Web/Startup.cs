@@ -18,9 +18,10 @@ namespace Web
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        public Startup(IConfiguration configuration, IWebHostEnvironment env)
         {
             Configuration = configuration;
+            CMS.Data.Helper.Constrants.RootPath =  env.ContentRootPath;
         }
 
         public IConfiguration Configuration { get; }
@@ -35,10 +36,10 @@ namespace Web
             services.AddScoped<IArticleService, ArticleSerivce>();
             services.AddScoped<IContentFactory, ContentFactory>();
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
-
+            
             Constrants.TrustedConnection = Configuration.GetConnectionString("TrustedConnection");
             Constrants.AuthenticationConnection = Configuration.GetConnectionString("AuthenticationConnection");
-
+            Constrants.UrlHost = Configuration.GetValue<string>("Url:UrlHost");
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

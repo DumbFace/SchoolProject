@@ -8,7 +8,7 @@ using CMS.Core.Domain;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 
-namespace Prensentation.Areas.cp.Controllers
+namespace Web.Areas.cp.Controllers
 {
     [ApiController]
     [Route("api/content")]

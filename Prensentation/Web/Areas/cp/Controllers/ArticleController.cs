@@ -7,8 +7,9 @@ using CMS.Core.Domain;
 using CMS.Data.Service.ArticleService;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Web;
 
-namespace Prensentation.Areas.cp.Controllers
+namespace Web.Areas.cp.Controllers
 {
     [Area("cp")]
     // [Route("[controller]")]
@@ -69,6 +70,14 @@ namespace Prensentation.Areas.cp.Controllers
             _service.Update(obj);
             _service.Save();
             return Ok("OK");
+        }
+
+        [HttpDelete]
+        public IActionResult Delete(int id)
+        {
+            _service.Delete(id);
+            _service.Save();
+            return Ok("Delete");
         }
 
 

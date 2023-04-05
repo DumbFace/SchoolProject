@@ -1,17 +1,26 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 
+@{
+    string Title = ViewBag.Title != null ? ViewBag.Title : "Blog Thủ Thuật | Chia sẽ các thủ thuật về công nghệ";
+    string Description = ViewBag.Description != null ? ViewBag.Description : "Blog Thủ Thuật | Chia sẽ các thủ thuật về công nghệ";
+    string Url = ViewBag.Url != null ? ViewBag.Url : "https://phamphuongkhang.xyz";
+}
 <head>
+    <link rel="icon" href="https://phamphuongkhang.xyz/images/logo.png" type="image/icon type">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blog Thủ Thuật | Chia sẽ các thủ thuật về công nghệ</title>
+    <title>
+        @Html.Raw(Title)
+    </title>
+    <meta name="description"
+        content="@Html.Raw(Description)">
     <meta name="google-site-verification" content="n7-Sc3A7Znnok_1AAeUhdBhjcStPTVQ07kGtv9v-mvE" />
     <meta name="google-site-verification" content="2yLc0cvYrHTy2eHVWlNzLQew7Bcg5TfZ8gkMReAH-4A" />
     <meta content="index,follow" name="robots" />
-    <meta name="description" content="Blog chia sẽ kiến thức & mẹo vặt trong quá trình phát triển ứng dụng">
-    <meta property="og:title" content="Blog Thủ Thuật | Chia sẽ các thủ thuật về công nghệ" />
-    <meta property="og:description" content="Blog chia sẽ kiến thức & mẹo vặt trong quá trình phát triển ứng dụng" />
-    <meta property="og:url" content="https://phamphuongkhang.xyz" />
+    <meta property="og:title" content="@Html.Raw(Title)" />
+    <meta property="og:description" content="@Html.Raw(Description)" />
+    <meta property="og:url" content="@Html.Raw(Url)" />
     <meta property="og:type" content="article" />
     <meta property="og:image" content="https://phamphuongkhang.xyz/images/logo.png" />
     <meta property="og:image:width" content="1200" />

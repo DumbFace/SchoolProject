@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using CMS.Core.Domain;
 using Microsoft.Extensions.Configuration;
-
+using CMS.Data.Helper;
 namespace CMS.Data.EFCore
 {
     public class KhangDB : DbContext
@@ -16,7 +16,7 @@ namespace CMS.Data.EFCore
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=.\\SQLEXPRESSKHANG;Database=KhangDB;Trusted_Connection=True;");
+            optionsBuilder.UseSqlServer(Constrants.TrustedConnection);
         }
 
         public DbSet<Article> Articles { get; set; }

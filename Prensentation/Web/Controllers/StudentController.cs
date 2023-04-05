@@ -8,7 +8,7 @@ using CMS.Data.EFCore;
 using CMS.Core.Domain;
 using Microsoft.Extensions.Configuration;
 
-namespace Prensentation.Controllers
+namespace Web.Controllers
 {
     [ApiController]
     [Route("api/student")]

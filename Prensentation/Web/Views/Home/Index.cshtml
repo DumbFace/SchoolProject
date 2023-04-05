@@ -177,26 +177,26 @@
 				<!-- Content of the page -->
 				<div id="content" class="col-xs-12 col-md-8">
 					<!-- widget of the page -->
-					<section class="widget profile-widget style1 hidden-md hidden-lg wow fadeInLeft"
+					@* <section class="widget profile-widget style1 hidden-md hidden-lg wow fadeInLeft"
 						data-wow-delay="0.6s">
 						<div class="profile-pic">
-							<a href="#">
-								<img src="http://placehold.it/180x180" alt="John Aston">
-							</a>
+						<a href="#">
+						<img src="http://placehold.it/180x180" alt="John Aston">
+						</a>
 						</div>
 						<h3><a href="#">John Aston</a></h3>
 						<p>Hi, I am John Aston. Duis autem vel eum dolor in hendrerit in vulputate velit esse mole
-							consequat, vel illum dolore eu feugiat nulla lisis at vero eros et accumsan et iusto.</p>
+						consequat, vel illum dolore eu feugiat nulla lisis at vero eros et accumsan et iusto.</p>
 						<!-- Social networks of the page -->
 						<ul class="social-networks justify">
-							<li><a href="#"><span class="icon ico-facebook"></span></a></li>
-							<li><a href="#"><span class="icon ico-twitter"></span></a></li>
-							<li><a href="#"><span class="icon ico-google-plus"></span></a></li>
-							<li><a href="#"><span class="icon ico-linkedin"></span></a></li>
-							<li><a href="#"><span class="icon ico-pinterest"></span></a></li>
+						<li><a href="#"><span class="icon ico-facebook"></span></a></li>
+						<li><a href="#"><span class="icon ico-twitter"></span></a></li>
+						<li><a href="#"><span class="icon ico-google-plus"></span></a></li>
+						<li><a href="#"><span class="icon ico-linkedin"></span></a></li>
+						<li><a href="#"><span class="icon ico-pinterest"></span></a></li>
 						</ul>
 						<!-- Social networks of the page end -->
-					</section>
+						</section> *@
 					<!-- widget of the page end -->
 					<!-- cols holder of the page -->
 					<div class="cols-holder">
@@ -207,12 +207,15 @@
 							{
 								string urlLink = item.Url + "-" + item.Id + ".html";
 								<article class="post wow fadeInLeft" data-wow-delay="0.6s">
-									<div class="img-holder"><a href="single-post.html">
-											<img src="@item.Thumb" alt="@item.Title"></a></div>
+									<div class="img-holder">
+										<a href="@urlLink">
+											<img src="@item.Thumb" alt="@item.Title">
+										</a>
+									</div>
 									<div class="text-wrap">
-										<time>@item.DateCreate.ToString("dd/MM/yyyy HH:mm") 
-											- <a href="#">Thủ Thuật</a></time>
-										<h2><a href="/@urlLink">@item.Title</a>
+										<time>@item.DateCreate.ToString("dd/MM/yyyy HH:mm") - <a href="#">Thủ Thuật</a></time>
+										<h2>
+											<a href="/@urlLink">@item.Title</a>
 										</h2>
 										<p>
 											@item.Description

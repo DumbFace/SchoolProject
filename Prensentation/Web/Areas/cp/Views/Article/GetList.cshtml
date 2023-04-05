@@ -20,7 +20,7 @@
                     <td scope="row">@item.Id</td>
                     <td>
                         <span class="badge badge-primary">Title: </span> @item.Title <br>
-                        <span class="badge badge-success">Description: </span>  @item.Description <br>
+                        <span class="badge badge-success">Description: </span> @item.Description <br>
                     </td>
                     <td>
                         <img src="@item.Thumb" />
@@ -28,6 +28,9 @@
                     <td>
                         <button class="btn primary" onclick="Edit(@item.Id)">
                             <i class="fa fa-edit"></i>
+                        </button>
+                        <button class="btn primary" onclick="Delete(@item.Id)">
+                            <i class="fa fa-close"></i>
                         </button>
                     </td>
                 </tr>

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-namespace Prensentation.Area.CP.Controllers
+namespace Web.Area.CP.Controllers
 {
     [Area("cp")]
     public class HomeController : Controller

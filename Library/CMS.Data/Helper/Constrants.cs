@@ -11,5 +11,8 @@ namespace CMS.Data.Helper
         public static string TrustedConnection = "";
 
         public static string AuthenticationConnection = "";
+        public static string RootPath = "";
+        public static string UrlHost = ""; 
+
     }
 }

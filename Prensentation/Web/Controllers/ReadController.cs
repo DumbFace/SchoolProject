@@ -7,8 +7,8 @@ using CMS.Data.Service.ArticleService;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Web.Models;
-
-namespace Prensentation.Controllers
+using CMS.Data.Helper;
+namespace Web.Controllers
 {
     public class ReadController : Controller
     {
@@ -22,9 +22,15 @@ namespace Prensentation.Controllers
         }
 
         [Route("{url}-{id}.html")]
-        public IActionResult Index(string url,int id)
+        public IActionResult Index(string url, int id)
         {
             var article = _service.GetById(id);
+
+            ViewBag.Title = article.Title;
+            ViewBag.Description = article.Description;
+            ViewBag.Url = Constrants.UrlHost + article.Url + "-" + article.Id + ".html";
+            ViewBag.ImageFB = article.Thumb;
+
             return View(article);
         }
 
