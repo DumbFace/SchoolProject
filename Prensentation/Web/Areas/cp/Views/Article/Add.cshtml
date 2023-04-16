@@ -5,6 +5,11 @@
 
 
 <form>
+    <input type="hidden" id="Url" name="Url" value="@Model.Url">
+    <input type="hidden" id="DateCreate" name="DateCreate" value="@Model.Url">
+    <input type="hidden" id="DatePublish" name="DatePublish" value="@Model.DatePublish">
+    <input type="hidden" id="DateModified" name="DateModified" value="@Model.DateModified">
+
     <div class="form-group">
         <label for="Category">Loại bài viết</label>
         <div class="row">
@@ -38,16 +43,14 @@
             </div>
             <div class="col-sm-12">
                 <div class="document-editor__toolbar"></div>
-                <div id="editor">
-                </div>
+                <div id="editor"></div>
             </div>
         </div>
     </div>
     <div class="form-group">
         <div class="row">
             <div class="col-sm-2">
-                <select class="form-control" name="Status" id="Status"
-                    asp-items="Html.GetEnumSelectList<StatusCode>()">
+                <select class="form-control" name="Status" id="Status" asp-items="Html.GetEnumSelectList<StatusCode>()">
                 </select>
             </div>
         </div>

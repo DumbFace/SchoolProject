@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 using CMS.Core.Domain;
 using CMS.Data.EFCore;
@@ -42,13 +43,15 @@ namespace Web.Factory
                             Category = article.Category,
                             Content = article.Content,
                             Url = article.Url,
-                            DatePublish = article.DatePublish
+                            DatePublish = article.DatePublish,
+                            Thumb = article.Thumb
                         });
 
             if (Type != null)
             {
-                data.Where(x => x.Category == Type);
+                data = data.Where(x => x.Category == Type);
             }
+            // 
             return data;
         }
 
@@ -62,7 +65,7 @@ namespace Web.Factory
                 {
                     Id = article.Id,
                     Url = article.Url,
-                    DatePublish = article.DatePublish                    
+                    DatePublish = article.DatePublish
                 }
              );
         }

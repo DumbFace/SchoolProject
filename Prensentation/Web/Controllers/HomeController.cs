@@ -5,7 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using CMS.Core.Domain;
 using CMS.Data.EFCore;
-using CMS.Data.Service.ArticleService;
+using CMS.Service.ArticleService;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;

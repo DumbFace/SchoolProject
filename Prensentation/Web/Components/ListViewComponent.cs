@@ -28,6 +28,9 @@ namespace Web.ViewComponents
                 case ListView.Trick:
                     data = _content.GetArticles(CategoryEnum.Trick);
                     break;
+                case ListView.DesignPattern:
+                    data = _content.GetArticles(CategoryEnum.DesignPattern);
+                    break;
             }
             return View(data);
         }

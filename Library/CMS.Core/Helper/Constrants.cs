@@ -10,10 +10,11 @@ namespace CMS.Core.Helper
 
         public static string TrustedConnectionLaptop = "";
         public static string TrustedConnectionDesktop = "";
-
+        public static string DefaultConnectString = "";
         public static string AuthenticationConnection = "";
         public static string RootPath = "";
         public static string UrlHost = "";
+
 
     }
 }

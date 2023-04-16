@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 
@@ -10,6 +12,9 @@ namespace CMS.Data.EFCore
     {
         private KhangDB _context = null;
         private DbSet<T> table = null;
+
+        public IQueryable<T> GetTable => table;
+
         public Repository()
         {
             this._context = new KhangDB();
@@ -21,7 +26,7 @@ namespace CMS.Data.EFCore
             table = _context.Set<T>();
         }
         public IEnumerable<T> GetAll()
-        { 
+        {
             return table.ToList();
         }
         public T GetById(object id)
@@ -34,6 +39,7 @@ namespace CMS.Data.EFCore
         }
         public void Update(T obj)
         {
+
             table.Attach(obj);
             _context.Entry(obj).State = EntityState.Modified;
         }
@@ -45,6 +51,22 @@ namespace CMS.Data.EFCore
         public void Save()
         {
             _context.SaveChanges();
+        }
+
+        public T GetEntity(Expression<Func<T, bool>> whereFunc)
+        {
+            var entity = table.Where(whereFunc).FirstOrDefault();
+            return entity;
+        }
+
+        public IEnumerable<TResult> GetAllFilter<TResult>(Expression<Func<T, bool>> whereFunc = null, Expression<Func<T, TResult>> projection = null)
+        {
+            IEnumerable<TResult> data = new List<TResult>();
+            if (whereFunc != null && projection != null)
+            {
+                data = table.Where(whereFunc).Select(projection);
+            }
+            return data;
         }
     }
 }

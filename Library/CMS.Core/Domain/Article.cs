@@ -30,7 +30,7 @@ namespace CMS.Core.Domain
         [Display(Name = "Thủ Thuật")]
         Trick,
         [Display(Name = "Design Pattern")]
-        LifeStyle,
+        DesignPattern,
     }
 
     public enum StatusCode

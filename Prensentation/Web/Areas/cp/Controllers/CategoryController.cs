@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using CMS.Core.Domain;
 using CMS.Data.EFCore;
-using CMS.Data.Service.CategoryService;
+using CMS.Service.CategoryService;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 

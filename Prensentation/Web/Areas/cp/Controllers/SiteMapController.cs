@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 using CMS.Core.Domain;
-using CMS.Data.Service.ArticleService;
+using CMS.Service.ArticleService;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -57,7 +57,7 @@ namespace Web.Areas.cp.Controllers
                 writer.WriteElementString("loc", "https://phamphuongkhang.xyz/");
                 writer.WriteElementString("lastmod", DateTime.Now.ToString("yyyy-MM-ddTHH:mm:00+07:00"));
                 writer.WriteElementString("changefreq", "hourly");
-                writer.WriteElementString("priority", "1.0");
+                writer.WriteElementString("priority", "1.00");
                 writer.WriteEndElement(); // end of url
 
                 foreach (ArticleViewModel item in articles)

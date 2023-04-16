@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PVmB78ZQqetXQ5/jlnlmTaejYdpTgnAoFOQjvKH0g2d8dIzsVj3HAAacwRhTd2OFt8++xbUqU5hKHT7flGsOkg==",
+  "dgSpecHash": "BMky0OZv8HmZkA4FTJgz9vS/BNZMAgq3qL/IYokiS+eHp1sJ5XrnrY9DdXwxFnVEFDAPkIKAQlcTRBcXUeSMJw==",
   "success": true,
-  "projectFilePath": "E:\\Workspace\\Repo\\Github\\SchoolProject\\Prensentation\\Web\\Web.csproj",
+  "projectFilePath": "E:\\Workspace\\Repo\\Github\\BlogProject\\Prensentation\\Web\\Web.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Khang\\.nuget\\packages\\microsoft.aspnetcore.mvc.razor.extensions\\5.0.15\\microsoft.aspnetcore.mvc.razor.extensions.5.0.15.nupkg.sha512",
     "C:\\Users\\Khang\\.nuget\\packages\\microsoft.aspnetcore.mvc.razor.runtimecompilation\\5.0.15\\microsoft.aspnetcore.mvc.razor.runtimecompilation.5.0.15.nupkg.sha512",

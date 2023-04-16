@@ -4,7 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using CMS.Core.Domain;
-using CMS.Data.Service.ArticleService;
+using CMS.Service.ArticleService;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Web;
@@ -63,16 +63,18 @@ namespace Web.Areas.cp.Controllers
             return Ok("Saved!");
         }
 
-        [HttpPut]
+        [HttpPost]
         public IActionResult Update([FromBody] Article obj)
         {
+            obj.DateCreate = obj.DateCreate.AddHours(7);
+            obj.DatePublish = obj.DatePublish.AddHours(7);
             obj.DateModified = DateTime.Now;
             _service.Update(obj);
             _service.Save();
             return Ok("OK");
         }
 
-        [HttpDelete]
+        [HttpGet]
         public IActionResult Delete(int id)
         {
             _service.Delete(id);

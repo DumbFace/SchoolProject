@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "y4dWD8HsZ64TtX1TidiaEd3IOgm/yKmiplaSf05hEkqpWKTfoLtoxlGotp++vjDvHA7kQYCBgfc1O2M0yWKZqQ==",
+  "dgSpecHash": "b+skICkC7sbR/RuaiggJ3fluSqk0lWEg5m8POd7nCL3xew0TR0LVc1/9LORbYzr9RqV+voY9Y0dQlTi7LK/B9g==",
   "success": true,
-  "projectFilePath": "E:\\Workspace\\Repo\\Github\\SchoolProject\\Prensentation\\Web.Factory\\Web.Factory.csproj",
+  "projectFilePath": "e:\\Workspace\\Repo\\Github\\BlogProject\\Prensentation\\Web.Factory\\Web.Factory.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Khang\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\Khang\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",

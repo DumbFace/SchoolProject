@@ -10,8 +10,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using CMS.Data.EFCore;
 using CMS.Core.Helper;
-using CMS.Data.Service.CategoryService;
-using CMS.Data.Service.ArticleService;
+using CMS.Service.CategoryService;
+using CMS.Service.ArticleService;
 using Web.Factory;
 
 namespace Web
@@ -40,6 +40,7 @@ namespace Web
             Constrants.TrustedConnectionLaptop = Configuration.GetConnectionString("TrustedConnectionLaptop");
             Constrants.TrustedConnectionDesktop = Configuration.GetConnectionString("TrustedConnectionDesktop");
             Constrants.AuthenticationConnection = Configuration.GetConnectionString("AuthenticationConnection");
+            Constrants.DefaultConnectString = Configuration.GetConnectionString("DefaultConnectString");
             Constrants.UrlHost = Configuration.GetValue<string>("Url:UrlHost");
         }
 

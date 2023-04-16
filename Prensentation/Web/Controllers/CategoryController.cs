@@ -18,9 +18,18 @@ namespace Web.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index(ListView type)
+        [Route("thu-thuat")]
+        public IActionResult Trick()
         {
-            ViewBag.category = type;
+            ViewBag.category = ListView.Trick;
+            return View("~/Views/Home/Index.cshtml");
+        }
+
+        
+        [Route("mau-thiet-ke")]
+        public IActionResult Pattern()
+        {
+            ViewBag.category = ListView.DesignPattern;
             return View("~/Views/Home/Index.cshtml");
         }
 

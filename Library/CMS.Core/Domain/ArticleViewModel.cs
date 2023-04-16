@@ -18,6 +18,7 @@ namespace CMS.Core.Domain
         public string DatePublishConvert { get => DatePublish.ToString("dd/MM/yyyy HH:mm"); }
         public DateTime DatePublish { get; set; }
         public CategoryEnum Category { get; set; }
+        public StatusCode Status { get; set; }
     }
 
 
@@ -25,6 +26,7 @@ namespace CMS.Core.Domain
     {
         Home,
         Trick,
+        DesignPattern,
 
     }
 }
