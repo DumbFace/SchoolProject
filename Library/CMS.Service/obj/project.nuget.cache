@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "xxLonRwB49EqHRnmu5V0Po2rpDJ7/zWUzJ04l7bPifBsrjkQAfJs5KelmU1dTTaFsiiyHvISVvX71KIQG01Ntg==",
+  "dgSpecHash": "PpILcaHHbBHrW6LZO5r4qsF88FXZM08PsoANx8DF8TDFQgEUzNswGD6DkA60BN9GqDtd2NAEjrBQSJhIYP4sAw==",
   "success": true,
-  "projectFilePath": "e:\\Workspace\\Repo\\Github\\BlogProject\\Library\\CMS.Service\\CMS.Service.csproj",
+  "projectFilePath": "E:\\Workspace\\Repo\\Github\\BlogProject\\Library\\CMS.Service\\CMS.Service.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Khang\\.nuget\\packages\\jetbrains.annotations\\2022.3.1\\jetbrains.annotations.2022.3.1.nupkg.sha512",
     "C:\\Users\\Khang\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\Khang\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",
     "C:\\Users\\Khang\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.0.1\\microsoft.data.sqlclient.sni.runtime.2.0.1.nupkg.sha512",
@@ -97,7 +98,8 @@
     "C:\\Users\\Khang\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\Khang\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\Khang\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\Khang\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
+    "C:\\Users\\Khang\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
+    "C:\\Users\\Khang\\.nuget\\packages\\x.pagedlist\\8.4.7\\x.pagedlist.8.4.7.nupkg.sha512"
   ],
   "logs": []
 }

@@ -49,10 +49,9 @@ namespace Web.Areas.cp.Controllers
             {
                 writer.Formatting = Formatting.Indented;
                 writer.Indentation = 2;
+                writer.WriteStartDocument();
                 writer.WriteStartElement("urlset");
                 writer.WriteAttributeString("xmlns", "http://www.sitemaps.org/schemas/sitemap/0.9");
-                writer.WriteAttributeString("xmlns:xsi", "http://www.w3.org/2001/XMLSchema-instance");
-                writer.WriteAttributeString("xsi:schemaLocation", "http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd");
                 writer.WriteStartElement("url");
                 writer.WriteElementString("loc", "https://phamphuongkhang.xyz/");
                 writer.WriteElementString("lastmod", DateTime.Now.ToString("yyyy-MM-ddTHH:mm:00+07:00"));
@@ -69,8 +68,8 @@ namespace Web.Areas.cp.Controllers
                     writer.WriteElementString("priority", "0.80");
                     writer.WriteEndElement();  //end url
                 }
-
                 writer.WriteEndElement(); // end of urlset
+                writer.WriteEndDocument();
                 writer.Close();
 
                 // code to write the sitemap goes here

@@ -105,7 +105,7 @@ h6 a,
 .widget.recent-posts-widget a.tag.hot,
 .widget.recent-posts-widget time a,
 .widget.profile-widget.version-ii .social-networks a,
-.instagram-slider .slide > a,
+.instagram-slider .slide>a,
 .aside .social-networks a,
 .footer-nav a,
 .subscribe-form button,
@@ -235,7 +235,7 @@ h6 a,
 .widget.recent-posts-widget a.tag.hot,
 .widget.recent-posts-widget time a,
 .widget.profile-widget.version-ii .social-networks a,
-.instagram-slider .slide > a,
+.instagram-slider .slide>a,
 .aside .social-networks a,
 .footer-nav a,
 .subscribe-form button,
@@ -298,9 +298,9 @@ h6 a,
 	line-height: 0;
 }
 
-.widget.widget_categories .lists-holder > *,
-.widget .social-networks.justify > *,
-.widget ul.social-networks.justify > * {
+.widget.widget_categories .lists-holder>*,
+.widget .social-networks.justify>*,
+.widget ul.social-networks.justify>* {
 	display: inline-block;
 	vertical-align: top;
 	text-align: left;
@@ -317,8 +317,10 @@ h6 a,
 }
 
 .ellipsis {
-	white-space: nowrap; /* 1 */
-	text-overflow: ellipsis; /* 2 */
+	white-space: nowrap;
+	/* 1 */
+	text-overflow: ellipsis;
+	/* 2 */
 	overflow: hidden;
 }
 
@@ -330,48 +332,27 @@ img {
 .comment-form input[type="text"],
 .search-form input[type="text"],
 .post-password-form input[type="text"],
-.comment-form
-input[type="tel"],
-.search-form
-input[type="tel"],
-.post-password-form
-input[type="tel"],
-.comment-form
-input[type="email"],
-.search-form
-input[type="email"],
-.post-password-form
-input[type="email"],
-.comment-form
-input[type="search"],
-.search-form
-input[type="search"],
-.post-password-form
-input[type="search"],
-.comment-form
-input[type="password"],
-.search-form
-input[type="password"],
-.post-password-form
-input[type="password"],
-.comment-form
-input[type="url"],
-.search-form
-input[type="url"],
-.post-password-form
-input[type="url"],
-.comment-form
-input[type="date"],
-.search-form
-input[type="date"],
-.post-password-form
-input[type="date"],
-.comment-form
-textarea,
-.search-form
-textarea,
-.post-password-form
-textarea {
+.comment-form input[type="tel"],
+.search-form input[type="tel"],
+.post-password-form input[type="tel"],
+.comment-form input[type="email"],
+.search-form input[type="email"],
+.post-password-form input[type="email"],
+.comment-form input[type="search"],
+.search-form input[type="search"],
+.post-password-form input[type="search"],
+.comment-form input[type="password"],
+.search-form input[type="password"],
+.post-password-form input[type="password"],
+.comment-form input[type="url"],
+.search-form input[type="url"],
+.post-password-form input[type="url"],
+.comment-form input[type="date"],
+.search-form input[type="date"],
+.post-password-form input[type="date"],
+.comment-form textarea,
+.search-form textarea,
+.post-password-form textarea {
 	-webkit-appearance: none;
 	-webkit-border-radius: 0;
 	border: 1px solid #999;
@@ -381,144 +362,81 @@ textarea {
 .comment-form input[type="text"]:focus,
 .search-form input[type="text"]:focus,
 .post-password-form input[type="text"]:focus,
-.comment-form
-  input[type="tel"]:focus,
-.search-form
-  input[type="tel"]:focus,
-.post-password-form
-  input[type="tel"]:focus,
-.comment-form
-  input[type="email"]:focus,
-.search-form
-  input[type="email"]:focus,
-.post-password-form
-  input[type="email"]:focus,
-.comment-form
-  input[type="search"]:focus,
-.search-form
-  input[type="search"]:focus,
-.post-password-form
-  input[type="search"]:focus,
-.comment-form
-  input[type="password"]:focus,
-.search-form
-  input[type="password"]:focus,
-.post-password-form
-  input[type="password"]:focus,
-.comment-form
-  input[type="url"]:focus,
-.search-form
-  input[type="url"]:focus,
-.post-password-form
-  input[type="url"]:focus,
-.comment-form
-  input[type="date"]:focus,
-.search-form
-  input[type="date"]:focus,
-.post-password-form
-  input[type="date"]:focus,
-.comment-form
-  textarea:focus,
-.search-form
-  textarea:focus,
-.post-password-form
-  textarea:focus {
+.comment-form input[type="tel"]:focus,
+.search-form input[type="tel"]:focus,
+.post-password-form input[type="tel"]:focus,
+.comment-form input[type="email"]:focus,
+.search-form input[type="email"]:focus,
+.post-password-form input[type="email"]:focus,
+.comment-form input[type="search"]:focus,
+.search-form input[type="search"]:focus,
+.post-password-form input[type="search"]:focus,
+.comment-form input[type="password"]:focus,
+.search-form input[type="password"]:focus,
+.post-password-form input[type="password"]:focus,
+.comment-form input[type="url"]:focus,
+.search-form input[type="url"]:focus,
+.post-password-form input[type="url"]:focus,
+.comment-form input[type="date"]:focus,
+.search-form input[type="date"]:focus,
+.post-password-form input[type="date"]:focus,
+.comment-form textarea:focus,
+.search-form textarea:focus,
+.post-password-form textarea:focus {
 	border-color: #333;
 }
 
 .comment-form input[type="text"]::-webkit-input-placeholder,
 .search-form input[type="text"]::-webkit-input-placeholder,
 .post-password-form input[type="text"]::-webkit-input-placeholder,
-.comment-form
-  input[type="tel"]::-webkit-input-placeholder,
-.search-form
-  input[type="tel"]::-webkit-input-placeholder,
-.post-password-form
-  input[type="tel"]::-webkit-input-placeholder,
-.comment-form
-  input[type="email"]::-webkit-input-placeholder,
-.search-form
-  input[type="email"]::-webkit-input-placeholder,
-.post-password-form
-  input[type="email"]::-webkit-input-placeholder,
-.comment-form
-  input[type="search"]::-webkit-input-placeholder,
-.search-form
-  input[type="search"]::-webkit-input-placeholder,
-.post-password-form
-  input[type="search"]::-webkit-input-placeholder,
-.comment-form
-  input[type="password"]::-webkit-input-placeholder,
-.search-form
-  input[type="password"]::-webkit-input-placeholder,
-.post-password-form
-  input[type="password"]::-webkit-input-placeholder,
-.comment-form
-  input[type="url"]::-webkit-input-placeholder,
-.search-form
-  input[type="url"]::-webkit-input-placeholder,
-.post-password-form
-  input[type="url"]::-webkit-input-placeholder,
-.comment-form
-  input[type="date"]::-webkit-input-placeholder,
-.search-form
-  input[type="date"]::-webkit-input-placeholder,
-.post-password-form
-  input[type="date"]::-webkit-input-placeholder,
-.comment-form
-  textarea::-webkit-input-placeholder,
-.search-form
-  textarea::-webkit-input-placeholder,
-.post-password-form
-  textarea::-webkit-input-placeholder {
+.comment-form input[type="tel"]::-webkit-input-placeholder,
+.search-form input[type="tel"]::-webkit-input-placeholder,
+.post-password-form input[type="tel"]::-webkit-input-placeholder,
+.comment-form input[type="email"]::-webkit-input-placeholder,
+.search-form input[type="email"]::-webkit-input-placeholder,
+.post-password-form input[type="email"]::-webkit-input-placeholder,
+.comment-form input[type="search"]::-webkit-input-placeholder,
+.search-form input[type="search"]::-webkit-input-placeholder,
+.post-password-form input[type="search"]::-webkit-input-placeholder,
+.comment-form input[type="password"]::-webkit-input-placeholder,
+.search-form input[type="password"]::-webkit-input-placeholder,
+.post-password-form input[type="password"]::-webkit-input-placeholder,
+.comment-form input[type="url"]::-webkit-input-placeholder,
+.search-form input[type="url"]::-webkit-input-placeholder,
+.post-password-form input[type="url"]::-webkit-input-placeholder,
+.comment-form input[type="date"]::-webkit-input-placeholder,
+.search-form input[type="date"]::-webkit-input-placeholder,
+.post-password-form input[type="date"]::-webkit-input-placeholder,
+.comment-form textarea::-webkit-input-placeholder,
+.search-form textarea::-webkit-input-placeholder,
+.post-password-form textarea::-webkit-input-placeholder {
 	color: #ccc;
 }
 
 .comment-form input[type="text"]::-moz-placeholder,
 .search-form input[type="text"]::-moz-placeholder,
 .post-password-form input[type="text"]::-moz-placeholder,
-.comment-form
-  input[type="tel"]::-moz-placeholder,
-.search-form
-  input[type="tel"]::-moz-placeholder,
-.post-password-form
-  input[type="tel"]::-moz-placeholder,
-.comment-form
-  input[type="email"]::-moz-placeholder,
-.search-form
-  input[type="email"]::-moz-placeholder,
-.post-password-form
-  input[type="email"]::-moz-placeholder,
-.comment-form
-  input[type="search"]::-moz-placeholder,
-.search-form
-  input[type="search"]::-moz-placeholder,
-.post-password-form
-  input[type="search"]::-moz-placeholder,
-.comment-form
-  input[type="password"]::-moz-placeholder,
-.search-form
-  input[type="password"]::-moz-placeholder,
-.post-password-form
-  input[type="password"]::-moz-placeholder,
-.comment-form
-  input[type="url"]::-moz-placeholder,
-.search-form
-  input[type="url"]::-moz-placeholder,
-.post-password-form
-  input[type="url"]::-moz-placeholder,
-.comment-form
-  input[type="date"]::-moz-placeholder,
-.search-form
-  input[type="date"]::-moz-placeholder,
-.post-password-form
-  input[type="date"]::-moz-placeholder,
-.comment-form
-  textarea::-moz-placeholder,
-.search-form
-  textarea::-moz-placeholder,
-.post-password-form
-  textarea::-moz-placeholder {
+.comment-form input[type="tel"]::-moz-placeholder,
+.search-form input[type="tel"]::-moz-placeholder,
+.post-password-form input[type="tel"]::-moz-placeholder,
+.comment-form input[type="email"]::-moz-placeholder,
+.search-form input[type="email"]::-moz-placeholder,
+.post-password-form input[type="email"]::-moz-placeholder,
+.comment-form input[type="search"]::-moz-placeholder,
+.search-form input[type="search"]::-moz-placeholder,
+.post-password-form input[type="search"]::-moz-placeholder,
+.comment-form input[type="password"]::-moz-placeholder,
+.search-form input[type="password"]::-moz-placeholder,
+.post-password-form input[type="password"]::-moz-placeholder,
+.comment-form input[type="url"]::-moz-placeholder,
+.search-form input[type="url"]::-moz-placeholder,
+.post-password-form input[type="url"]::-moz-placeholder,
+.comment-form input[type="date"]::-moz-placeholder,
+.search-form input[type="date"]::-moz-placeholder,
+.post-password-form input[type="date"]::-moz-placeholder,
+.comment-form textarea::-moz-placeholder,
+.search-form textarea::-moz-placeholder,
+.post-password-form textarea::-moz-placeholder {
 	opacity: 1;
 	color: #ccc;
 }
@@ -526,144 +444,81 @@ textarea {
 .comment-form input[type="text"]:-moz-placeholder,
 .search-form input[type="text"]:-moz-placeholder,
 .post-password-form input[type="text"]:-moz-placeholder,
-.comment-form
-  input[type="tel"]:-moz-placeholder,
-.search-form
-  input[type="tel"]:-moz-placeholder,
-.post-password-form
-  input[type="tel"]:-moz-placeholder,
-.comment-form
-  input[type="email"]:-moz-placeholder,
-.search-form
-  input[type="email"]:-moz-placeholder,
-.post-password-form
-  input[type="email"]:-moz-placeholder,
-.comment-form
-  input[type="search"]:-moz-placeholder,
-.search-form
-  input[type="search"]:-moz-placeholder,
-.post-password-form
-  input[type="search"]:-moz-placeholder,
-.comment-form
-  input[type="password"]:-moz-placeholder,
-.search-form
-  input[type="password"]:-moz-placeholder,
-.post-password-form
-  input[type="password"]:-moz-placeholder,
-.comment-form
-  input[type="url"]:-moz-placeholder,
-.search-form
-  input[type="url"]:-moz-placeholder,
-.post-password-form
-  input[type="url"]:-moz-placeholder,
-.comment-form
-  input[type="date"]:-moz-placeholder,
-.search-form
-  input[type="date"]:-moz-placeholder,
-.post-password-form
-  input[type="date"]:-moz-placeholder,
-.comment-form
-  textarea:-moz-placeholder,
-.search-form
-  textarea:-moz-placeholder,
-.post-password-form
-  textarea:-moz-placeholder {
+.comment-form input[type="tel"]:-moz-placeholder,
+.search-form input[type="tel"]:-moz-placeholder,
+.post-password-form input[type="tel"]:-moz-placeholder,
+.comment-form input[type="email"]:-moz-placeholder,
+.search-form input[type="email"]:-moz-placeholder,
+.post-password-form input[type="email"]:-moz-placeholder,
+.comment-form input[type="search"]:-moz-placeholder,
+.search-form input[type="search"]:-moz-placeholder,
+.post-password-form input[type="search"]:-moz-placeholder,
+.comment-form input[type="password"]:-moz-placeholder,
+.search-form input[type="password"]:-moz-placeholder,
+.post-password-form input[type="password"]:-moz-placeholder,
+.comment-form input[type="url"]:-moz-placeholder,
+.search-form input[type="url"]:-moz-placeholder,
+.post-password-form input[type="url"]:-moz-placeholder,
+.comment-form input[type="date"]:-moz-placeholder,
+.search-form input[type="date"]:-moz-placeholder,
+.post-password-form input[type="date"]:-moz-placeholder,
+.comment-form textarea:-moz-placeholder,
+.search-form textarea:-moz-placeholder,
+.post-password-form textarea:-moz-placeholder {
 	color: #ccc;
 }
 
 .comment-form input[type="text"]:-ms-input-placeholder,
 .search-form input[type="text"]:-ms-input-placeholder,
 .post-password-form input[type="text"]:-ms-input-placeholder,
-.comment-form
-  input[type="tel"]:-ms-input-placeholder,
-.search-form
-  input[type="tel"]:-ms-input-placeholder,
-.post-password-form
-  input[type="tel"]:-ms-input-placeholder,
-.comment-form
-  input[type="email"]:-ms-input-placeholder,
-.search-form
-  input[type="email"]:-ms-input-placeholder,
-.post-password-form
-  input[type="email"]:-ms-input-placeholder,
-.comment-form
-  input[type="search"]:-ms-input-placeholder,
-.search-form
-  input[type="search"]:-ms-input-placeholder,
-.post-password-form
-  input[type="search"]:-ms-input-placeholder,
-.comment-form
-  input[type="password"]:-ms-input-placeholder,
-.search-form
-  input[type="password"]:-ms-input-placeholder,
-.post-password-form
-  input[type="password"]:-ms-input-placeholder,
-.comment-form
-  input[type="url"]:-ms-input-placeholder,
-.search-form
-  input[type="url"]:-ms-input-placeholder,
-.post-password-form
-  input[type="url"]:-ms-input-placeholder,
-.comment-form
-  input[type="date"]:-ms-input-placeholder,
-.search-form
-  input[type="date"]:-ms-input-placeholder,
-.post-password-form
-  input[type="date"]:-ms-input-placeholder,
-.comment-form
-  textarea:-ms-input-placeholder,
-.search-form
-  textarea:-ms-input-placeholder,
-.post-password-form
-  textarea:-ms-input-placeholder {
+.comment-form input[type="tel"]:-ms-input-placeholder,
+.search-form input[type="tel"]:-ms-input-placeholder,
+.post-password-form input[type="tel"]:-ms-input-placeholder,
+.comment-form input[type="email"]:-ms-input-placeholder,
+.search-form input[type="email"]:-ms-input-placeholder,
+.post-password-form input[type="email"]:-ms-input-placeholder,
+.comment-form input[type="search"]:-ms-input-placeholder,
+.search-form input[type="search"]:-ms-input-placeholder,
+.post-password-form input[type="search"]:-ms-input-placeholder,
+.comment-form input[type="password"]:-ms-input-placeholder,
+.search-form input[type="password"]:-ms-input-placeholder,
+.post-password-form input[type="password"]:-ms-input-placeholder,
+.comment-form input[type="url"]:-ms-input-placeholder,
+.search-form input[type="url"]:-ms-input-placeholder,
+.post-password-form input[type="url"]:-ms-input-placeholder,
+.comment-form input[type="date"]:-ms-input-placeholder,
+.search-form input[type="date"]:-ms-input-placeholder,
+.post-password-form input[type="date"]:-ms-input-placeholder,
+.comment-form textarea:-ms-input-placeholder,
+.search-form textarea:-ms-input-placeholder,
+.post-password-form textarea:-ms-input-placeholder {
 	color: #ccc;
 }
 
 .comment-form input[type="text"].placeholder,
 .search-form input[type="text"].placeholder,
 .post-password-form input[type="text"].placeholder,
-.comment-form
-  input[type="tel"].placeholder,
-.search-form
-  input[type="tel"].placeholder,
-.post-password-form
-  input[type="tel"].placeholder,
-.comment-form
-  input[type="email"].placeholder,
-.search-form
-  input[type="email"].placeholder,
-.post-password-form
-  input[type="email"].placeholder,
-.comment-form
-  input[type="search"].placeholder,
-.search-form
-  input[type="search"].placeholder,
-.post-password-form
-  input[type="search"].placeholder,
-.comment-form
-  input[type="password"].placeholder,
-.search-form
-  input[type="password"].placeholder,
-.post-password-form
-  input[type="password"].placeholder,
-.comment-form
-  input[type="url"].placeholder,
-.search-form
-  input[type="url"].placeholder,
-.post-password-form
-  input[type="url"].placeholder,
-.comment-form
-  input[type="date"].placeholder,
-.search-form
-  input[type="date"].placeholder,
-.post-password-form
-  input[type="date"].placeholder,
-.comment-form
-  textarea.placeholder,
-.search-form
-  textarea.placeholder,
-.post-password-form
-  textarea.placeholder {
+.comment-form input[type="tel"].placeholder,
+.search-form input[type="tel"].placeholder,
+.post-password-form input[type="tel"].placeholder,
+.comment-form input[type="email"].placeholder,
+.search-form input[type="email"].placeholder,
+.post-password-form input[type="email"].placeholder,
+.comment-form input[type="search"].placeholder,
+.search-form input[type="search"].placeholder,
+.post-password-form input[type="search"].placeholder,
+.comment-form input[type="password"].placeholder,
+.search-form input[type="password"].placeholder,
+.post-password-form input[type="password"].placeholder,
+.comment-form input[type="url"].placeholder,
+.search-form input[type="url"].placeholder,
+.post-password-form input[type="url"].placeholder,
+.comment-form input[type="date"].placeholder,
+.search-form input[type="date"].placeholder,
+.post-password-form input[type="date"].placeholder,
+.comment-form textarea.placeholder,
+.search-form textarea.placeholder,
+.post-password-form textarea.placeholder {
 	color: #ccc;
 }
 
@@ -769,7 +624,7 @@ textarea {
 }
 
 .commentlist-item .commentlist-item,
-.commentlist-item + .commentlist-item {
+.commentlist-item+.commentlist-item {
 	padding-top: 1.6em;
 }
 
@@ -1518,7 +1373,7 @@ h6 a:focus {
 	margin: 0 10px;
 }
 
-#nav .navbar-nav > li.active > a:after {
+#nav .navbar-nav>li.active>a:after {
 	width: 18px;
 	opacity: 1;
 }
@@ -1540,13 +1395,13 @@ h6 a:focus {
 	display: none;
 }
 
-#nav li:hover > a:after {
+#nav li:hover>a:after {
 	opacity: 1;
 	width: 18px;
 	border-color: #f5ab35;
 }
 
-#nav li:hover > .drop {
+#nav li:hover>.drop {
 	max-height: 666px;
 }
 
@@ -1603,8 +1458,8 @@ h6 a:focus {
 	position: relative;
 }
 
-#nav .drop li:hover > a:after,
-#nav .drop li.active > a:after {
+#nav .drop li:hover>a:after,
+#nav .drop li.active>a:after {
 	left: 0;
 	right: 0;
 	width: auto;
@@ -2508,7 +2363,7 @@ h2 {
 	margin-bottom: 4px;
 }
 
-.widget.widget_categories.version-ii ul li + li {
+.widget.widget_categories.version-ii ul li+li {
 	padding-top: 5px;
 	border-top: 1px solid #eee;
 }
@@ -3036,11 +2891,11 @@ h2 {
 	background: #000;
 }
 
-.instagram-slider .slide > a {
+.instagram-slider .slide>a {
 	display: block;
 }
 
-.instagram-slider .slide > a:hover {
+.instagram-slider .slide>a:hover {
 	opacity: .8;
 }
 
@@ -3720,8 +3575,10 @@ aside.version-ii .subscribe-form .form-control:focus {
 
 .post-block:hover img {
 	transform: rotate(3deg) scale(1.1);
-	-ms-transform: rotate(3deg) scale(1.1); /* IE 9 */
-	-webkit-transform: rotate(3deg) scale(1.1); /* Chrome, Safari, Opera */
+	-ms-transform: rotate(3deg) scale(1.1);
+	/* IE 9 */
+	-webkit-transform: rotate(3deg) scale(1.1);
+	/* Chrome, Safari, Opera */
 }
 
 .post-block .post-holder {
@@ -3754,7 +3611,7 @@ aside.version-ii .subscribe-form .form-control:focus {
 }
 
 .post-block time {
-	font: 700 12px/1.1  "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font: 700 12px/1.1 "Helvetica Neue", Helvetica, Arial, sans-serif;
 	display: inline-block;
 	vertical-align: top;
 	text-transform: uppercase;
@@ -3822,11 +3679,11 @@ aside.version-ii .subscribe-form .form-control:focus {
 	padding: 12px 8px 11px 29px;
 }
 
-.post-block footer .text + .text {
+.post-block footer .text+.text {
 	position: relative;
 }
 
-.post-block footer .text + .text:before {
+.post-block footer .text+.text:before {
 	position: absolute;
 	content: "";
 	top: -99px;
@@ -3835,7 +3692,7 @@ aside.version-ii .subscribe-form .form-control:focus {
 	right: auto;
 }
 
-.post-block footer .text + .text:before {
+.post-block footer .text+.text:before {
 	border-left: 1px solid #fff;
 }
 
@@ -4024,7 +3881,7 @@ aside.version-ii .subscribe-form .form-control:focus {
 	min-height: inherit;
 }
 
-.blocks-slider .align-holder > * {
+.blocks-slider .align-holder>* {
 	white-space: normal;
 	display: inline-block;
 	vertical-align: bottom;
@@ -4652,16 +4509,16 @@ aside.version-ii .subscribe-form .form-control:focus {
 	display: none;
 }
 
-.commentlist-item + .commentlist-item {
+.commentlist-item+.commentlist-item {
 	padding-top: 19px;
 }
 
-.commentlist-item + .commentlist-item .comment {
+.commentlist-item+.commentlist-item .comment {
 	padding-top: 28px;
 	position: relative;
 }
 
-.commentlist-item + .commentlist-item .comment:before {
+.commentlist-item+.commentlist-item .comment:before {
 	position: absolute;
 	content: "";
 	top: 0;
@@ -4670,7 +4527,7 @@ aside.version-ii .subscribe-form .form-control:focus {
 	right: 0;
 }
 
-.commentlist-item + .commentlist-item .comment:before {
+.commentlist-item+.commentlist-item .comment:before {
 	border-top: 1px solid #f1f1f1;
 	display: block;
 	margin: 0 29px;
@@ -5297,7 +5154,7 @@ aside.version-ii .subscribe-form .form-control:focus {
 	min-height: 100vh;
 }
 
-.page-error .container-holder > * {
+.page-error .container-holder>* {
 	white-space: normal;
 	display: inline-block;
 	vertical-align: middle;
@@ -5423,8 +5280,10 @@ aside.version-ii .subscribe-form .form-control:focus {
 	opacity: 1;
 	transition: all .6s ease;
 	-webkit-transition: all .6s ease;
-	-ms-transform: translateY(-20px); /* IE 9 */
-	-webkit-transform: translateY(-20px); /* Safari */
+	-ms-transform: translateY(-20px);
+	/* IE 9 */
+	-webkit-transform: translateY(-20px);
+	/* Safari */
 	transform: translateY(-20px);
 }
 
@@ -5705,7 +5564,7 @@ aside.version-ii .subscribe-form .form-control:focus {
 	border-radius: 0;
 	text-align: center;
 	text-transform: uppercase;
-	border: 1px solid  transparent;
+	border: 1px solid transparent;
 }
 
 #style-changer .list-style .btn2:hover {
@@ -5868,7 +5727,7 @@ aside.version-ii .subscribe-form .form-control:focus {
 
 .fancybox-error {
 	color: #444;
-	font: 14px/20px "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font: 14px/20px "Helvetica Neue", Helvetica, Arial, sans-serif;
 	margin: 0;
 	padding: 15px;
 	white-space: nowrap;
@@ -5928,7 +5787,8 @@ aside.version-ii .subscribe-form .form-control:focus {
 	height: 100%;
 	cursor: pointer;
 	text-decoration: none;
-	background: transparent url("images/blank.gif"); /* helps IE */
+	background: transparent url("images/blank.gif");
+	/* helps IE */
 	-webkit-tap-highlight-color: transparent;
 	z-index: 8040;
 }
@@ -6016,7 +5876,7 @@ aside.version-ii .subscribe-form .form-control:focus {
 
 .fancybox-title {
 	visibility: hidden;
-	font: normal 13px/20px "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font: normal 13px/20px "Helvetica Neue", Helvetica, Arial, sans-serif;
 	position: relative;
 	text-shadow: none;
 	z-index: 8050;
@@ -6039,7 +5899,8 @@ aside.version-ii .subscribe-form .form-control:focus {
 	display: inline-block;
 	margin-right: -100%;
 	padding: 2px 20px;
-	background: transparent; /* Fallback for web browsers that doesn't support RGBa */
+	background: transparent;
+	/* Fallback for web browsers that doesn't support RGBa */
 	background: rgba(0, 0, 0, .8);
 	border-radius: 15px;
 	text-shadow: 0 1px 2px #222;
@@ -6071,18 +5932,23 @@ aside.version-ii .subscribe-form .form-control:focus {
 
 /*Retina graphics!*/
 
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5) {
+
 	#fancybox-loading,
 	.fancybox-close,
 	.fancybox-prev span,
 	.fancybox-next span {
 		background-image: url("images/fancybox_sprite@2x.png");
-		background-size: 44px 152px; /*The size of the normal image, half the size of the hi-res image*/
+		background-size: 44px 152px;
+		/*The size of the normal image, half the size of the hi-res image*/
 	}
 
 	#fancybox-loading div {
 		background-image: url("images/fancybox_loading@2x.gif");
-		background-size: 24px 24px; /*The size of the normal image, half the size of the hi-res image*/
+		background-size: 24px 24px;
+		/*The size of the normal image, half the size of the hi-res image*/
 	}
 }
 
@@ -6093,6 +5959,7 @@ aside.version-ii .subscribe-form .form-control:focus {
 }
 
 @media (max-width: 767px) {
+
 	.navigation .page-numbers,
 	.navigation-comments .page-numbers {
 		padding: 0;
@@ -6274,5 +6141,198 @@ aside.version-ii .subscribe-form .form-control:focus {
 
 
 .text-wrap time a {
-    text-transform: none;
+	text-transform: none;
+}
+
+
+/* CSS Paging */
+
+.pagination {
+	display: inline-block;
+	padding-left: 0;
+	margin: 20px 0;
+	border-radius: 4px;
+}
+
+.pagination>li {
+	display: inline;
+}
+
+.pagination>li>a,
+.pagination>li>span {
+	position: relative;
+	float: left;
+	padding: 6px 12px;
+	margin-left: -1px;
+	line-height: 1.428571429;
+	text-decoration: none;
+	background-color: #ffffff;
+	border: 1px solid #dddddd;
+}
+
+.pagination>li:first-child>a,
+.pagination>li:first-child>span {
+	margin-left: 0;
+	border-bottom-left-radius: 4px;
+	border-top-left-radius: 4px;
+}
+
+.pagination>li:last-child>a,
+.pagination>li:last-child>span {
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+}
+
+.pagination>li>a:hover,
+.pagination>li>span:hover,
+.pagination>li>a:focus,
+.pagination>li>span:focus {
+	background-color: #eeeeee;
+}
+
+.pagination>.active>a,
+.pagination>.active>span,
+.pagination>.active>a:hover,
+.pagination>.active>span:hover,
+.pagination>.active>a:focus,
+.pagination>.active>span:focus {
+	z-index: 2;
+	color: #ffffff;
+	cursor: default;
+	background-color: #428bca;
+	border-color: #428bca;
+}
+
+.pagination>.disabled>span,
+.pagination>.disabled>a,
+.pagination>.disabled>a:hover,
+.pagination>.disabled>a:focus {
+	color: #999999;
+	cursor: not-allowed;
+	background-color: #ffffff;
+	border-color: #dddddd;
+}
+
+.pagination-lg>li>a,
+.pagination-lg>li>span {
+	padding: 10px 16px;
+	font-size: 18px;
+}
+
+.pagination-lg>li:first-child>a,
+.pagination-lg>li:first-child>span {
+	border-bottom-left-radius: 6px;
+	border-top-left-radius: 6px;
+}
+
+.pagination-lg>li:last-child>a,
+.pagination-lg>li:last-child>span {
+	border-top-right-radius: 6px;
+	border-bottom-right-radius: 6px;
+}
+
+.pagination-sm>li>a,
+.pagination-sm>li>span {
+	padding: 5px 10px;
+	font-size: 12px;
+}
+
+.pagination-sm>li:first-child>a,
+.pagination-sm>li:first-child>span {
+	border-bottom-left-radius: 3px;
+	border-top-left-radius: 3px;
+}
+
+.pagination-sm>li:last-child>a,
+.pagination-sm>li:last-child>span {
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+
+.pager {
+	padding-left: 0;
+	margin: 20px 0;
+	text-align: center;
+	list-style: none;
+}
+
+.pager:before,
+.pager:after {
+	display: table;
+	content: " ";
+}
+
+.pager:after {
+	clear: both;
+}
+
+.pager:before,
+.pager:after {
+	display: table;
+	content: " ";
+}
+
+.pager:after {
+	clear: both;
+}
+
+.pager li {
+	display: inline;
+}
+
+.pager li>a,
+.pager li>span {
+	display: inline-block;
+	padding: 5px 14px;
+	background-color: #ffffff;
+	border: 1px solid #dddddd;
+	border-radius: 15px;
+}
+
+.pager li>a:hover,
+.pager li>a:focus {
+	text-decoration: none;
+	background-color: #eeeeee;
+}
+
+.pager .next>a,
+.pager .next>span {
+	float: right;
+}
+
+.pager .previous>a,
+.pager .previous>span {
+	float: left;
+}
+
+.pager .disabled>a,
+.pager .disabled>a:hover,
+.pager .disabled>a:focus,
+.pager .disabled>span {
+	color: #999999;
+	cursor: not-allowed;
+	background-color: #ffffff;
+}
+
+
+nav.navigation.pagination {
+	width: 100%;
+	text-align: center;
+}
+
+.post-block:hover img {
+	transform: none;
+	-webkit-transform: none;
+}
+
+
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:hover,
+.navbar-default .navbar-nav>.active>a:focus {
+	color: #555;
+	background-color: transparent;
+}
+
+.logo h1 {
+	margin: 0;
 }

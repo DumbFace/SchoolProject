@@ -19,18 +19,24 @@ namespace Web.Controllers
         }
 
         [Route("thu-thuat")]
-        public IActionResult Trick()
+        public IActionResult Trick(int page = 1, int pagesize = 5)
         {
             ViewBag.category = ListView.Trick;
+            ViewBag.Page = page;
+            ViewBag.PageSize = pagesize;
+            ViewBag.Action = "Trick";
             return View("~/Views/Home/Index.cshtml");
         }
 
-        
+
         [Route("mau-thiet-ke")]
-        public IActionResult Pattern()
+        public IActionResult Pattern(int page = 1, int pagesize = 5)
         {
             ViewBag.category = ListView.DesignPattern;
-            return View("~/Views/Home/Index.cshtml");
+            ViewBag.Page = page;
+            ViewBag.PageSize = pagesize;
+            ViewBag.Action = "Pattern";
+             return View("~/Views/Home/Index.cshtml");
         }
 
 

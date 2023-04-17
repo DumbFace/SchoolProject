@@ -1,0 +1,10 @@
+@model IPagedList<ArticleViewModel>
+@{
+    string Action = ViewBag.Action;
+}
+@if (Model.Count > 0)
+{
+    <nav role="navigation" class="navigation pagination">
+        @Html.PagedListPager(Model, page => Url.Action((string)ViewBag.Action, new { page }))
+    </nav>
+}

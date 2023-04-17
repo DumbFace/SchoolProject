@@ -5,6 +5,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using X.PagedList;
 
 namespace CMS.Data.EFCore
 {
@@ -67,6 +68,11 @@ namespace CMS.Data.EFCore
                 data = table.Where(whereFunc).Select(projection);
             }
             return data;
+        }
+
+        public IPagedList<TResult> Paging<TResult>(Expression<Func<T, bool>> whereFunc = null, Expression<Func<T, TResult>> projection = null, int page = 1, int pagesize = 10)
+        {
+            return table.Where(whereFunc).Select(projection).ToPagedList(page, pagesize);
         }
     }
 }

@@ -15,6 +15,7 @@ using System.Linq.Expressions;
 using Moq;
 using CMS.Service.CategoryService;
 using Web.Factory;
+using X.PagedList;
 
 namespace UnitTest
 {
@@ -23,11 +24,13 @@ namespace UnitTest
         private readonly IArticleService articleService;
 
         public ArticleSerivce _article = null;
-
-        public TesTestRepositoryt(IArticleService _articleService)
+        public ContentFactory _contentFactory = null;
+        public TesTestRepositoryt()
         {
-            articleService = _articleService;
+            // articleService = _articleService;
             _article = new ArticleSerivce();
+
+            _contentFactory = new ContentFactory(new Repository<Article>(), new Repository<Category>());
         }
         public Article GetArticleById(int id)
         {
@@ -55,16 +58,34 @@ namespace UnitTest
         //     // Assert.Equal(result, dbMock.ProductBeingProcessed);
         // }
 
+        [Fact]
+        public void TestSiteMap()
+        {
+            // SiteMapController 
 
+            // Assert.Equal(5, paged.PageSize);
+            // Assert.Equal(1, paged.PageNumber);
+            // Assert.Equal(5, paged.Count);
+        }
 
         [Fact]
-        public void getAritlcle_ShouldMatch()
+        public void getArticlePaging()
         {
-            var expected = _article.GetById(17);
-            var result = _article.GetEntity(s => s.Id == 17);
-
-            Assert.Equal(expected, result);
+            IPagedList<ArticleViewModel> paged = _contentFactory.GetArticlesPaging(CategoryEnum.Trick, 1, 5);
+            // var itemCount = paged.PageSize > 0;
+            Assert.Equal(5, paged.PageSize);
+            Assert.Equal(1, paged.PageNumber);
+            Assert.Equal(5, paged.Count);
         }
+
+        // [Fact]
+        // public void getAritlcle_ShouldMatch()
+        // {
+        //     var expected = _article.GetById(17);
+        //     var result = _article.GetEntity(s => s.Id == 17);
+
+        //     Assert.Equal(expected, result);
+        // }
 
         // [Theory]
         // [InlineData(StatusCode.Public, "a")]
@@ -106,7 +127,6 @@ namespace UnitTest
         //         DatePublish = s.DatePublish,
         //         Category = s.Category,
         //         Status = s.Status
-
         //     };
         //     var expected = _article.GetAllFilter(predicate, projection).ToArray();
         //     Assert.Equal(expected, actual);
@@ -137,6 +157,6 @@ namespace UnitTest
     //         var test = Expression.Lambda<Func<T, bool>>(Expression.AndAlso(expr1.Body, invokedExpr), expr1.Parameters);
     //         return test;
     //     }
- 
+
     // }
 }

@@ -9,6 +9,7 @@ using Microsoft.Extensions.Logging;
 using Web.Models;
 using CMS.Core.Helper;
 using Web.Factory;
+using CMS.Core.Domain;
 
 namespace Web.Controllers
 {
@@ -26,12 +27,14 @@ namespace Web.Controllers
         [Route("{url}-{id}.html")]
         public IActionResult Index(string url, int id)
         {
-            var article = _service.GetArticleById(id);
-
+            ArticleViewModel article = _service.GetArticleById(id);
+            ViewBag.FriendlyUrl = article.FriendLyUrl;
+            ViewBag.Thumb = article.Thumb;
             ViewBag.Title = article.Title;
             ViewBag.Description = article.Description;
-            ViewBag.Url = Constrants.UrlHost + article.Url + "-" + article.Id + ".html";
-            ViewBag.ImageFB = article.Thumb;
+            ViewBag.DatePublish = article.DatePublish;
+            ViewBag.DateModified = article.DateModified;
+            ViewBag.Reading = 1;
 
             return View(article);
         }

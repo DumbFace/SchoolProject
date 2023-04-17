@@ -16,6 +16,7 @@ namespace CMS.Core.Domain
         public string FriendLyUrl { get => Constrants.UrlHost + Url + "-" + Id + ".html"; }
         public string DateSiteMap { get => DatePublish.ToString("yyyy-MM-ddTHH:mm:00+07:00"); }
         public string DatePublishConvert { get => DatePublish.ToString("dd/MM/yyyy HH:mm"); }
+        public DateTime DateModified { get; set; }
         public DateTime DatePublish { get; set; }
         public CategoryEnum Category { get; set; }
         public StatusCode Status { get; set; }

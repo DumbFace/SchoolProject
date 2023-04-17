@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     "net5.0": {
+      "JetBrains.Annotations/2022.3.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/JetBrains.Annotations.dll": {
+            "related": ".deps.json;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/JetBrains.Annotations.dll": {
+            "related": ".deps.json;.xml"
+          }
+        }
+      },
       "Microsoft.CSharp/4.5.0": {
         "type": "package",
         "compile": {
@@ -1718,6 +1731,18 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "X.PagedList/8.4.7": {
+        "type": "package",
+        "dependencies": {
+          "JetBrains.Annotations": "2022.3.1"
+        },
+        "compile": {
+          "lib/netstandard2.1/X.PagedList.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/X.PagedList.dll": {}
+        }
+      },
       "CMS.Core/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -1734,7 +1759,8 @@
         "dependencies": {
           "CMS.Core": "1.0.0",
           "Microsoft.EntityFrameworkCore": "5.0.10",
-          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.10"
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.10",
+          "X.PagedList": "8.4.7"
         },
         "compile": {
           "bin/placeholder/CMS.Data.dll": {}
@@ -1746,6 +1772,28 @@
     }
   },
   "libraries": {
+    "JetBrains.Annotations/2022.3.1": {
+      "sha512": "11nsS3+lFICGkztVs9PP2NRItxf9fF+qD6xEW/T0YGto52zj07wseUeBdMAU1ah9HNVTDZyRC1u4NWdtJScwhw==",
+      "type": "package",
+      "path": "jetbrains.annotations/2022.3.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "jetbrains.annotations.2022.3.1.nupkg.sha512",
+        "jetbrains.annotations.nuspec",
+        "lib/net20/JetBrains.Annotations.dll",
+        "lib/net20/JetBrains.Annotations.xml",
+        "lib/netstandard1.0/JetBrains.Annotations.deps.json",
+        "lib/netstandard1.0/JetBrains.Annotations.dll",
+        "lib/netstandard1.0/JetBrains.Annotations.xml",
+        "lib/netstandard2.0/JetBrains.Annotations.deps.json",
+        "lib/netstandard2.0/JetBrains.Annotations.dll",
+        "lib/netstandard2.0/JetBrains.Annotations.xml",
+        "lib/portable40-net40+sl5+win8+wp8+wpa81/JetBrains.Annotations.dll",
+        "lib/portable40-net40+sl5+win8+wp8+wpa81/JetBrains.Annotations.xml"
+      ]
+    },
     "Microsoft.CSharp/4.5.0": {
       "sha512": "kaj6Wb4qoMuH3HySFJhxwQfe8R/sJsNJnANrvv8WdFPMoNbKY5htfNscv+LHCu5ipz+49m2e+WQXpLXr9XYemQ==",
       "type": "package",
@@ -5955,6 +6003,21 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
+    "X.PagedList/8.4.7": {
+      "sha512": "ZA1WcyNviMUhivCgwKAm/5/YsNP3Yf/n81SzrPaHSJOcFzavA9MrXTT8M+ZX4fvHwLCL1bY6BPXvwZF5pRtgTg==",
+      "type": "package",
+      "path": "x.pagedlist/8.4.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net6.0/X.PagedList.dll",
+        "lib/net7.0/X.PagedList.dll",
+        "lib/netstandard2.0/X.PagedList.dll",
+        "lib/netstandard2.1/X.PagedList.dll",
+        "x.pagedlist.8.4.7.nupkg.sha512",
+        "x.pagedlist.nuspec"
+      ]
+    },
     "CMS.Core/1.0.0": {
       "type": "project",
       "path": "../CMS.Core/CMS.Core.csproj",
@@ -5978,11 +6041,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Workspace\\Repo\\Github\\BlogProject\\Library\\CMS.Service\\CMS.Service.csproj",
+      "projectUniqueName": "e:\\Workspace\\Repo\\Github\\BlogProject\\Library\\CMS.Service\\CMS.Service.csproj",
       "projectName": "CMS.Service",
-      "projectPath": "E:\\Workspace\\Repo\\Github\\BlogProject\\Library\\CMS.Service\\CMS.Service.csproj",
+      "projectPath": "e:\\Workspace\\Repo\\Github\\BlogProject\\Library\\CMS.Service\\CMS.Service.csproj",
       "packagesPath": "C:\\Users\\Khang\\.nuget\\packages\\",
-      "outputPath": "E:\\Workspace\\Repo\\Github\\BlogProject\\Library\\CMS.Service\\obj\\",
+      "outputPath": "e:\\Workspace\\Repo\\Github\\BlogProject\\Library\\CMS.Service\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

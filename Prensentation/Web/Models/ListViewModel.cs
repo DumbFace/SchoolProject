@@ -13,6 +13,9 @@ namespace Web.Models
         public string Url { get; set; }
         public IEnumerable<Article> articles { get; set; }
         public ListView Type { get; set; }
+        public int Page { get; set; }
+        public int PageSize { get; set; }
+
     }
 
 }

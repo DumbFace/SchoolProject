@@ -27,9 +27,12 @@ namespace Web.Controllers
             _content = content;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(int page = 1, int pagesize = 6)
         {
             ViewBag.category = ListView.Home;
+            ViewBag.Page = page;
+            ViewBag.PageSize = pagesize;
+            ViewBag.Action = "Index";
             return View();
         }
 

@@ -19,7 +19,7 @@ namespace CMS.Data.EFCore
         {
             // optionsBuilder.UseSqlServer(Constrants.AuthenticationConnection);
             // optionsBuilder.UseSqlServer(Constrants.DefaultConnectString);
-            optionsBuilder.UseSqlServer("Server=.\\SQLEXPRESSKHANG;Database=KhangDB;Trusted_Connection=True;");
+            optionsBuilder.UseSqlServer(Constrants.DefaultConnectString);
         }
 
         public DbSet<Article> Articles { get; set; }

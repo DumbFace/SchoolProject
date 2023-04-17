@@ -5,6 +5,8 @@ using System.Linq.Expressions;
 using System.Threading.Tasks;
 using CMS.Core.Domain;
 using CMS.Data.EFCore;
+using LinqKit;
+using X.PagedList;
 
 namespace Web.Factory
 {
@@ -21,38 +23,45 @@ namespace Web.Factory
             _repoArticle = repoArticle;
             _repoCategory = repoCategory;
         }
+        Expression<Func<Article, ArticleViewModel>> projection = s => new ArticleViewModel()
+        {
+            Id = s.Id,
+            Title = s.Title,
+            Description = s.Description,
+            Thumb = s.Thumb,
+            Url = s.Url,
+            DatePublish = s.DatePublish,
+            Category = s.Category,
+            Status = s.Status
+        };
+
+        Func<Article, ArticleViewModel> projectionFunc = s => new ArticleViewModel()
+        {
+            Id = s.Id,
+            Title = s.Title,
+            Description = s.Description,
+            Thumb = s.Thumb,
+            Url = s.Url,
+            DatePublish = s.DatePublish,
+            Category = s.Category,
+            Status = s.Status,
+            Content = s.Content
+        };
 
         public ArticleViewModel GetArticleById(int id)
         {
-            Article article = _repoArticle.GetById(id);
-            ArticleViewModel articleViewModel = new ArticleViewModel();
-            HelpingMapper.Mapper(articleViewModel, article);
-            return articleViewModel;
+            return projectionFunc(_repoArticle.GetById(id));
         }
-
-        public IEnumerable<ArticleViewModel> GetArticles(CategoryEnum? Type = null, int page = 1, int pageSize = 10)
+        public IPagedList<ArticleViewModel> GetArticlesPaging(CategoryEnum? type = null, int page = 1, int pagesize = 10)
         {
-            var data = (from article in _repoArticle.GetAll()
-                        where article.Status == StatusCode.Public && article.IsDelete == false
-                        orderby article.DatePublish descending
-                        select new ArticleViewModel
-                        {
-                            Id = article.Id,
-                            Title = article.Title,
-                            Description = article.Description,
-                            Category = article.Category,
-                            Content = article.Content,
-                            Url = article.Url,
-                            DatePublish = article.DatePublish,
-                            Thumb = article.Thumb
-                        });
-
-            if (Type != null)
+            var predicate = PredicateBuilder.New<Article>(true);
+            predicate = predicate.And(p => p.Status == StatusCode.Public);
+            predicate = predicate.And(p => p.IsDelete == false);
+            if (type != null)
             {
-                data = data.Where(x => x.Category == Type);
+                predicate = predicate.And(p => p.Category == type);
             }
-            // 
-            return data;
+            return _repoArticle.Paging<ArticleViewModel>(predicate, projection, page, pagesize);
         }
 
         public IEnumerable<ArticleViewModel> GetSiteMap()
@@ -68,21 +77,6 @@ namespace Web.Factory
                     DatePublish = article.DatePublish
                 }
              );
-        }
-    }
-    public static class HelpingMapper
-    {
-        public static void Mapper(ArticleViewModel des, Article src)
-        {
-            des.Id = src.Id;
-            des.Title = src.Title;
-            des.Description = src.Description;
-            des.Content = src.Content;
-            des.Thumb = src.Thumb;
-            des.Category = src.Category;
-            des.Url = src.Url;
-            des.Category = src.Category;
-            des.DatePublish = src.DatePublish;
         }
     }
 }

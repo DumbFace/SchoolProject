@@ -23,13 +23,13 @@ namespace Web.ViewComponents
             switch (model.Type)
             {
                 case ListView.Home:
-                    data = _content.GetArticles();
+                    data = _content.GetArticlesPaging(null, model.Page, model.PageSize);
                     break;
                 case ListView.Trick:
-                    data = _content.GetArticles(CategoryEnum.Trick);
+                    data = _content.GetArticlesPaging(CategoryEnum.Trick, model.Page, model.PageSize);
                     break;
                 case ListView.DesignPattern:
-                    data = _content.GetArticles(CategoryEnum.DesignPattern);
+                    data = _content.GetArticlesPaging(CategoryEnum.DesignPattern, model.Page, model.PageSize);
                     break;
             }
             return View(data);
